@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pretext>
+    <docinfo>
+
+    <rename element="theorem">Théorème</rename>
+    <rename element="definition">Définition</rename>
+    <rename element="example">Exemple</rename>
+    <rename element="corollary">Corollaire</rename>
+    <rename element="remark">Remarque</rename>
+    <rename element="hint">Indice</rename>
+    <rename element="objectives">Objectifs</rename>
+    <rename element="outcomes">Vocabulaire</rename>
+    <rename element="inlineexercise">Petit Exercice</rename>
+    <rename element="exercise">Exercice</rename>
+    <rename element="project">Exercice</rename>
+    <rename element="exercises">Exercice</rename>
+    <rename element="solution">Spoiler</rename>
+    <rename element="proof">Preuve</rename>
+    <rename element="appendix">Annexe</rename>
+
+
+<!--  <latex-preamble>
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{fontawesome}
+\usepackage{cancel}
+\usepackage{amsmath}
+</latex-preamble> -->
+
+<macros>
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\L}{\mathcal L}
+\newcommand{\B}{\mathscr B}
+\newcommand{\M}{\mathcal M}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lbb}{\,]\,}
+\newcommand{\rbb}{\,[\,}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rg}{rg}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\Card}{Card}
+\DeclareMathOperator{\Vect}{Vect}
+</macros>
+
+
+
+  </docinfo>
+
+
+
+  <article xml:id="al1-recap_chap2_matrices">
+    <title>Matrices</title>
+
+<introduction>
+
+<p></p>
+
+<image source="img/ninechapter.png"/>
+
+<p></p>
+
+
+
+        <objectives>
+          <title>Vous savez maintenant:</title>
+          <ol marker="1">
+              <li><p>Calculer un produit de deux matrices (et déterminer quand vous pouvez le faire, en fonction de leurs tailles)</p></li>
+              <li><p>Ce qu'on appelle les puissances d'une matrice carrée, et comment utiliser la formule du binôme de Newton pour les calculer</p></li>
+              <li><p>Mettre uen matrice sous forme échelonnée, puis sous forme échelonnée réduite</p></li>
+              <li><p>Déterminer si une matrice <m>2\times 2</m> est inversible, et appliquer la formule pour l'inverser</p></li>
+              <li><p>Inverser une matrice carrée de taille <m>n\times n</m>, avec <m>n\geq 3</m>:</p>
+                <ul>
+                <li>avec le pivot de Gauss</li>
+                <li>ou en utilisant des informations spécifiques à la matrice (comme une équation du type <m>A^2-3A+I_n = 0_{n,n}</m>).</li></ul>
+            </li>
+          </ol>
+        </objectives>
+        <p></p>
+
+
+
+        <p></p>
+
+<p>Et les mots suivants devraient vous être familiers:</p>
+
+<p></p>
+
+        <outcomes>
+           <ul>
+            <li>Matrice, taille de matrice, matrice carrée</li>
+            <li>Notations <m>\mathcal M_{n,p}(\K)</m> et <m>\mathcal M_{n}(\K)</m></li>
+            <li>Matrice identité de taille <m>n</m>, notée <m>I_n</m>.</li>
+            <li>Puissances d'une matrice</li>
+            <li>Matrice inversible, inverse d'une matrice</li>
+            <li>Matrices triangulaire (supérieure ou inférieure), matrice diagonale</li>
+            <li>Transposée d'une matrice</li>
+            <li>Matrice symétrique/antisymétrique</li>
+            <!--<li>Trace d'une matrice</li>-->
+          </ul>
+        </outcomes>
+
+        <p></p>
+
+        <p>Et si ce n'est pas le cas, vous trouverez <url href="http://carolinevernier.website/memos/matrices_vocab.pdf">ici</url> une fiche résumé pour ce chapitre.</p>
+
+      <p></p>
+
+</introduction>
+
+<section>
+  <title><mdash /> Testez vos réflexes</title>
+
+  <exercises>
+    <title>Vrai ou faux ?</title>
+
+
+
+   <exercise exercise-interactive="truefalse">
+    <statement correct="yes">
+      <p>Si <m> D_1,D_2 \in \mathcal{M}_n(\mathbb{R})</m> sont deux matrices diagonales, alors <m>D_1</m> et <m>D_2</m> commutent:</p>
+
+      <me>D_1D_2 = D_2D_1</me>
+          </statement>
+    <feedback>
+      <p>C'est vrai !</p>
+      <p>Soient <m>D_1,D_2</m> deux matrices diagonales, alors</p>
+      <me>D_1=\begin{pmatrix}  \lambda_1 \amp 0 \amp \dots \amp 0\\  0 \amp \lambda_2 \amp \dots \amp 0\\  \vdots \amp  \amp \ddots \amp \\
+  0 \amp \dots \amp 0 \amp \lambda_n \end{pmatrix},
+  D_2=\begin{pmatrix}  \mu_1 \amp 0 \amp \dots \amp 0\\  0 \amp \mu_2 \amp \dots \amp 0\\  \vdots \amp  \amp \ddots \amp \\  0 \amp \dots \amp 0 \amp \mu_n\end{pmatrix},
+</me>
+<p>donc</p>
+<md>
+<mrow>D_1D_2\amp = \begin{pmatrix}\lambda_1\amp 0\amp \dots\amp 0\\ 0\amp \lambda_2\amp \dots\amp 0\\\vdots\amp \amp \ddots\amp \\  0\amp \dots\amp 0\amp \lambda_n\end{pmatrix}\begin{pmatrix} \mu_1\amp 0\amp \dots\amp 0\\ 0\amp \mu_2\amp \amp 0\\  \vdots\amp \vdots\amp \ddots\amp \vdots\\  0\amp 0\amp \dots\amp \mu_n\end{pmatrix}</mrow>
+<mrow>\amp=\begin{pmatrix} \lambda_1\mu_1\amp 0\amp \dots\amp 0\\  0\amp \lambda_2\mu_2\amp \dots\amp 0\\  \vdots\amp \amp \ddots\amp \\  0\amp \dots\amp 0\amp \lambda_n\mu_n\end{pmatrix} </mrow>
+<mrow>\amp=\begin{pmatrix} \mu_1\lambda_1\amp 0\amp \dots\amp 0\\  0\amp \mu_2\lambda_2\amp \dots\amp 0\\  \vdots\amp \amp \ddots\amp \\  0\amp \dots\amp 0\amp \mu_n\lambda_n\end{pmatrix}=D_2D_1</mrow>
+</md>
+
+      </feedback>
+    </exercise>
+
+
+
+   <exercise exercise-interactive="truefalse">
+    <statement correct="no">
+      <p>Si <m>A\in \mathcal M_n(\mathbb{R})</m> est une matrice carrée, et <m>D\in \mathcal M_n(\mathbb{R})</m> une matrice diagonale, alors <m>A</m> et <m>D</m> commutent, autrement dit <m>AD=DA</m>.</p>
+          </statement>
+    <feedback>
+      <p>C'est faux !</p>
+      <p>Par exemple, si on prend</p>
+      <me>A=\begin{pmatrix}
+        1\amp 2\\3\amp 4
+        \end{pmatrix},
+        D=\begin{pmatrix}
+        -\pi\amp 0\\0\amp \sqrt{2}
+        \end{pmatrix} \in \mathcal M_2(\mathbb R)
+      </me>
+      <p>alors</p>
+      <me>AD=\begin{pmatrix}
+        -\pi\amp 2\sqrt{2}\\
+        -3\pi\amp 4\sqrt{2}
+        \end{pmatrix},
+        DA=\begin{pmatrix}
+        -\pi\amp -2\pi\\
+        3\sqrt{2}\amp 4\sqrt{2}
+        \end{pmatrix}\rightarrow AD\neq DA
+      </me>
+      <p>Plus généralement, on peut remarquer que, si on prend une matrice carrée et une matrice diagonale génériques</p>
+      <me>A=\begin{pmatrix}
+        a_{11}\amp a_{12}\amp \dots\amp a_{1n}\\
+        a_{21}\amp a_{22}\amp \amp \\
+        \vdots\amp \amp \ddots\amp \\
+        a_{n1}\amp a_{n2}\amp \dots\amp a_{nn}\\
+        \end{pmatrix},
+        D=\begin{pmatrix}
+        \lambda_1\amp 0\amp \dots\amp 0\\
+        0\amp \lambda_2\amp \dots\amp 0\\
+        \vdots\amp \amp \ddots\amp \\
+        0\amp \dots\amp 0\amp \lambda_n
+        \end{pmatrix}</me>
+        <p>on a en fait</p>
+        <me>AD=\begin{pmatrix}
+          \lambda_1a_{11}\amp \lambda_2a_{12}\amp \dots\amp \lambda_n a_{1n}\\
+          \lambda_1a_{21}\amp \lambda_2 a_{22}\amp \amp \\
+          \vdots\amp \amp \ddots\amp \\
+          \lambda_1 a_{n1}\amp \lambda_2 a_{n2}\amp \dots\amp \lambda_n a_{nn}\\
+          \end{pmatrix}
+        </me>
+        <p><m>\leadsto</m> la première colonne de <m>A</m> est multipliée par <m>\lambda_1</m>, la deuxième par <m>\lambda_2</m>, etc...</p>
+        <p>tandis que</p>
+        <me>
+          DA=\begin{pmatrix}
+          \lambda_1a_{11} \amp \lambda_1a_{12} \amp \dots \amp \lambda_1 a_{1n}\\
+          \lambda_2a_{21} \amp \lambda_2 a_{22} \amp  \amp \\
+          \vdots \amp  \amp \ddots \amp \\
+          \lambda_n a_{n1} \amp \lambda_n a_{n2} \amp \dots \amp \lambda_n a_{nn}\\
+          \end{pmatrix}
+        </me>
+        <p><m>\leadsto</m> la première ligne de <m>A</m> est multipliée par <m>\lambda_1</m>, la deuxième par <m>\lambda_2</m>, etc...</p>
+        <p>Donc, pour qu'on ait <m>AD=DA</m> quelle que soit la matrice <m>A</m>, il faut en fait que <m>\lambda_1=\lambda_2=....=\lambda_n</m>, autrement dit que <m>D=\lambda I_n</m>.</p>
+      </feedback>
+    </exercise>
+
+
+
+
+   <exercise exercise-interactive="truefalse">
+    <statement correct="yes">
+      <p>Pour toutes matrices <m>A,B\in\mathcal{M}_n(\mathbb{R})</m>, si <m>A\neq B</m> alors <m>{}^tA \neq {}^tB</m>.</p>
+          </statement>
+    <feedback>
+      <p>C'est vrai! </p>
+
+      <p><term>Preuve 1: par contraposée</term></p>
+      <p>Supposons que <m>{}^tA = {}^tB</m>, alors <m>{}^t({}^tA) \neq {}^t({}^tB)</m>, donc  <m>A=B</m>.</p>
+      <p><term>Preuve 2: directement</term></p>
+      <p>Supposons que <m>A\neq B</m>, alors <m>A</m> et <m>B</m> doivent avoir (au moins) un coefficient différent: autrement dit, il existe <m>(i,j)</m> tels que</p>
+      <me>a_{ij}\neq b_{ij}</me>
+      <p>or le <m>(j,i)</m>-ième coefficient de <m>{}^tA</m> est <m>a_{ij}</m>,  le <m>(j,i)</m>-ième coefficient de <m>{}^tB</m> est <m>b_{ij}</m>, donc les  <m>(j,i)</m>-ièmes coefficients de  <m>{}^tA</m> et <m>{}^tB</m> sont différents, donc ces deux matrices sont différentes.</p>
+    </feedback>
+  </exercise>
+
+  <exercise exercise-interactive="truefalse">
+    <statement correct="yes">
+      <p>Pour toutes matrices <m>A,B\in\mathcal{M}_n(\mathbb{R})</m>, si <m>A\neq B</m> alors <m>A^{-1} \neq B^{-1}</m>.</p>
+          </statement>
+    <feedback>
+      <p>C'est vrai! </p>
+
+      <p>On peut le montrer par contraposée</p>
+      <p>Supposons que <m>A^{-1} = B^{-1}</m>, alors <m>(A^{-1})^{-1} = (B^{-1})^{-1}</m>, autrement dit <m>A=B</m>.</p>
+    </feedback>
+  </exercise>
+
+
+  <exercise exercise-interactive="truefalse">
+    <statement correct="no">
+      <p>Pour toutes matrices <m>A,B\in\mathcal{M}_n(\mathbb{R})</m>, si <m>A\neq B</m> alors <m>Tr(A) \neq Tr(B)</m>.</p>
+          </statement>
+    <feedback>
+      <p>Cette fois, c'est faux: deux matrices différentes peuvent avoir la même trace. </p>
+      <p>Par exemple, si on prend</p>
+      <me>
+        A=\begin{pmatrix}1 \amp 0\\2 \amp 3\end{pmatrix},
+        B=\begin{pmatrix}1 \amp \pi\\2 \amp 3\end{pmatrix}
+      </me>
+      <p>alors <m>A\neq B</m> mais</p>
+      <me>Tr(A)=1+3=4=Tr(B)</me>
+      <p><m>\leadsto</m> la trace ne "voit" que la diagonale, donc si les matrices diffèrent sur un coefficient qui n'est pas sur la diagonale, elles peuvent tout de même avoir la même trace.</p>
+    </feedback>
+  </exercise>
+
+
+  <exercise exercise-interactive="truefalse">
+    <statement correct="no">
+      <p>Pour toutes matrices <m>A,B\in\mathcal{M}_n(\mathbb{R})</m>, s'il existe <m>i\in\{1,...,n\}</m> tel que <m>a_{ii}\neq b_{ii}</m> (autrement dit si <m>A</m> et <m>B</m> ont au moins un coefficient diagonal différent) alors <m>Tr(A)\neq Tr(B)</m>.</p>
+          </statement>
+    <feedback>
+      <p>Ca aussi c'est faux: deux matrices peuvent avoir la même trace même si elles ont des diagonales différentes</p>
+      <p>Par exemple, si on prend</p>
+      <me>
+        A=\begin{pmatrix}1 \amp 0\\2 \amp 3\end{pmatrix},
+        B=\begin{pmatrix}2 \amp \pi\\2 \amp 2\end{pmatrix}
+      </me>
+      <p>alors</p>
+      <me>Tr(A)=1+3=4=2+2=Tr(B)</me>
+    </feedback>
+  </exercise>
+
+
+
+  <exercise exercise-interactive="truefalse">
+    <statement correct="no">
+      <p>Si <m>A,B\in\mathcal{M}_n(\mathbb{R})</m> sont deux matrices inversibles telles que <m>A\neq B</m> alors, pour toute matrice <m>C\in\mathcal{M}_n(\mathbb{R})</m>, on a  <m>CA \neq CB</m>.</p>
+      </statement>
+    <feedback>
+      <p>C'est faux : par exemple si on prend</p>
+      <me>
+        A=\begin{pmatrix} 1 \amp 1\\-1 \amp 0\end{pmatrix},
+        B=\begin{pmatrix} 2 \amp 0\\-2 \amp 1\end{pmatrix},
+        C=\begin{pmatrix} 0 \amp 0\\  0 \amp 0\end{pmatrix}
+      </me>
+      <p>alors</p>
+      <me>CA=\begin{pmatrix}  0 \amp 0\\0 \amp 0\end{pmatrix}=CB</me>
+      <p>Et de manière générale, quelles que soient <m>A,B\in\mathcal{M}_n(\mathbb{R})</m>, égales ou non, </p>
+      <me>0_{n,n}A=0_{n,n}=0_{n,n}B</me>
+      <p>(où <m>0_{n,n}</m> est la matrice nulle)</p>
+    </feedback>
+  </exercise>
+
+
+  <exercise exercise-interactive="truefalse">
+    <statement correct="no">
+      <p>Si <m>A,B\in\mathcal{M}_n(\mathbb{R})</m> sont deux matrices inversibles telles que <m>A\neq B</m> alors, pour toute matrice <em>non nulle</em> <m>C\in\mathcal{M}_n(\mathbb{R})</m>, on a  <m>CA \neq CB</m>.</p>
+          </statement>
+    <feedback>
+      <p>C'est faux : par exemple si on prend</p>
+      <me>A=\begin{pmatrix}1 \amp 1\\-1 \amp 0\end{pmatrix},
+        B=\begin{pmatrix}2 \amp 0\\-2 \amp 1\end{pmatrix},
+        C=\begin{pmatrix}0 \amp 1\\0 \amp -1\end{pmatrix}
+      </me>
+      <p>alors</p>
+      <me>CA=\begin{pmatrix}0\amp 1\\0\amp -1\end{pmatrix}=CB</me>
+
+     
+    </feedback>
+  </exercise>
+
+
+  <exercise exercise-interactive="truefalse">
+    <statement correct="yes">
+      <p>Pour toutes matrices <m>A,B\in\mathcal{M}_n(\mathbb{R})</m>, si <m>A\neq B</m>m> alors, pour toute matrice inversible <m>C\in\mathcal{M}_n(\mathbb{R})</m>, on a  <m>AC \neq BC</m>.</p>
+          </statement>
+    <feedback>
+      <p>Cette fois c'est vrai: on peut le montrer par contraposée. </p>
+
+      <p>Soient <m>A,B\in\mathcal{M}_n(\mathbb{R})</m>, supposons qu'il existe une matrice inversible <m>C\in\mathcal{M}_n(\mathbb{R})</m> telle que <m>AC=BC</m>. </p>
+      <p>En multipliant cette égalité par l'inverse <m>C^{-1}</m>m> de <m>C</m>, on trouve</p>
+      <me>ACC^{-1}=BCC^{-1} \Rightarrow AI_n=BI_n \Rightarrow A=B</me>
+    </feedback>
+  </exercise>
+
+
+  <exercise exercise-interactive="truefalse">
+    <statement correct="no">
+      <p>Soit <m>A</m> une matrice inversible. Alors, pour tout réel <m>\lambda</m>, la matrice <m>\lambda A</m> est inversible et son inverse est</p>
+      <me>(\lambda A)^{-1}=\lambda A^{-1}</me>
+    </statement>
+    <feedback>
+      <p>Faux: Si <m>\lambda=0</m> alors <m>\lambda A</m> est la matrice nulle. Or celle-ci n'est pas inversible (pourquoi, au fait ?).</p>
+    </feedback>
+  </exercise>
+
+
+  <exercise exercise-interactive="truefalse">
+    <statement correct="no">
+      <p>Soit <m>A</m> une matrice inversible. Alors, pour tout réel <em>non nul</em> <m>\lambda</m>, la matrice <m>\lambda A</m> est inversible et son inverse est</p>
+      <me>(\lambda A)^{-1}=\lambda A^{-1}</me>
+    </statement>
+    <feedback>
+      <p>Encore faux: Prenons par exemple</p>
+      <me>A =\begin{pmatrix}2 \amp 1\\1 \amp 1\end{pmatrix},
+        \lambda=2 \Rightarrow \lambda A =\begin{pmatrix}4 \amp 2\\2 \amp 2\end{pmatrix}
+      </me>
+      <p>alors <m>A</m> et <m>\lambda A</m> sont inversibles, et par la formule de l'inverse pour les matrices 2x2 on a</p>
+      <me>A^{-1}=\begin{pmatrix}1 \amp -1\\-1 \amp 2\end{pmatrix},
+        \lambda A^{-1} =\begin{pmatrix} 2 \amp -2\\-2 \amp 4\end{pmatrix},
+        (\lambda A)^{-1} = \frac14\begin{pmatrix}2 \amp -2\\-2 \amp 4\end{pmatrix}
+        =\frac12 \begin{pmatrix}  1 \amp -1\\-1 \amp 2\end{pmatrix}
+      </me>
+      <p>donc <m>2\cdot A^{-1} \neq (2A)^{-1}</m>.</p>
+    </feedback>
+  </exercise>
+
+  
+  <exercise exercise-interactive="truefalse">
+    <statement correct="yes">
+      <p>Soit <m>A</m> une matrice inversible. Alors, pour tout réel non nul <m>\lambda</m>, la matrice <m>\lambda A</m> est inversible et son inverse est</p>
+      <me>(\lambda A)^{-1}=\frac1{\lambda} A^{-1}</me>
+    </statement>
+    <feedback>
+      <p>Cette fois c'est vrai: Soit  <m>A</m> une matrice inversible, <m>\lambda\neq 0</m>, alors</p>
+      <me>
+        (\frac1{\lambda} A^{-1})\cdot(\lambda A)=\frac1{\lambda}\lambda A^{-1}A=1\cdot I_n =I_n</me>
+        <p>et</p>
+        <me>(\lambda A)\cdot(\frac1{\lambda} A^{-1})=\lambda\frac1{\lambda} AA^{-1}=1\cdot I_n =I_n</me>
+        <p>donc <m>\lambda A</m> est inversible, et son inverse est bien  <m>\frac1{\lambda}A^{-1}</m>.</p>
+
+        <p><em>Remarque:</em>  Par contre,</p>
+        <me>
+          (\lambda A)(\lambda A^{-1})=\lambda^2 AA^{-1}=\lambda^2 I_n
+        </me>
+        <p>donc, sauf si <m>\lambda = \pm1</m>, l'inverse de <m>\lambda A</m> n'est pas <m>\lambda A^{-1}</m> !</p>
+    </feedback>
+  </exercise>
+</exercises>
+</section>
+
+<!--  -->
+
+<section>
+  <title><mdash /> Entraînez-vous !</title>
+
+  <p></p>
+
+  <image source="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHVuemFsNWtxYmJqcmMzbHFmZHZuZm96cnFvNWg4dmo5MDhleGY2NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qLHpYDyJoGfde/giphy.gif" width="60%"/>
+
+  <p></p>
+
+  <exercises>
+    <title>Opérations sur les matrices</title>
+    <exercise  exercise-interactive="fillin-basic" >
+        <statement><p>Supposons qu'on ait 5 matrices <m>A,B,C,D,E</m> de tailles respectives données ci-dessous:</p>
+
+         
+               <p> <tabular halign="center" top="minor" left="minor" bottom="minor" right="minor">
+                    <row>
+                        <cell>A</cell>
+                        <cell>B</cell>
+                        <cell>C</cell>
+                        <cell>D</cell>
+                        <cell>E</cell>
+                    </row>
+                    <row>
+                        <cell><m>3\times 1</m></cell>
+                        <cell><m>3\times 6</m></cell>
+                        <cell><m>6\times 2</m></cell>
+                        <cell><m>2\times 6</m></cell>
+                        <cell><m>1\times 3</m></cell>
+                    </row>
+                </tabular></p>
+          
+            <p>Si les opérations ci-dessous sont réalisables, indiquer la taille de la matrice obtenue, par exemple <m>\boxed{2\times 5}</m>, sinon indiquer <m>\boxed{\text{impossible}}</m></p>
+            <tabular>
+              <row><cell><m>EA</m></cell><cell> <var /></cell></row>
+              <row><cell><m>AE</m></cell><cell> <var /></cell></row>
+              <row><cell><m>A{}^tB</m></cell><cell> <var /></cell></row>
+              <row><cell><m>{}^tB(A+{}^tE)</m></cell><cell> <var /></cell></row>
+              <row><cell><m>2A+C</m></cell><cell> <var /></cell></row>
+              <row><cell><m>({}^tC+D){}^tB</m></cell><cell> <var /></cell></row>
+              <row><cell><m>CD+{}^tB{}^tE</m></cell><cell> <var /></cell></row>
+              <row><cell><m>(B{}^tD){}^tC + B</m></cell><cell> <var /></cell></row>
+            </tabular>
+      </statement><setup>
+        <var>
+        <condition string="1x1"><feedback><p>C'est ça !</p></feedback></condition>
+        <condition string="dfjgq"><feedback>
+          <m>{\color{orange}{1}}\times {\color{blue}{3}} \cdot {\color{blue}{3}}\times {\color{orange}{1}}\leadsto {\color{orange}{1}}\times{\color{orange}{1}}.</m>
+           </feedback>
+        </condition>
+        </var>
+         <var>
+        <condition string="3x3"><feedback><p>C'est ça !</p></feedback></condition>
+        <condition string="dfjgq"><feedback> 
+          <m>{\color{blue}{3}}\times {\color{orange}{1}} \cdot{\color{orange}{1}}\times {\color{blue}{3}} \leadsto {\color{blue}{3}}\times {\color{blue}{3}}</m> </feedback>
+        </condition>
+        </var>
+        <var>
+        <condition string="impossible"><feedback><p>C'est ça !</p></feedback></condition>
+        <condition string="dfjgq"><feedback><p><m>B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m> donc <m>{}^tB</m>  est de taille <m>{\color{purple}{6}}\times {\color{blue}{3}}</m>. Et</p>
+        <me>({\color{blue}{3}}\times {\color{orange}{1}}) \cdot({\color{purple}{6}}\times {\color{blue}{3}}) \leadsto \text{ pas définie !}</me></feedback>
+        </condition>
+        </var>
+
+        <var>
+        <condition string="6x1"><feedback><p>C'est ça !</p></feedback></condition>
+        <condition string="dfjgq"><feedback>
+          <p><m>E</m> est de taille <m>{\color{orange}{1}}\times {\color{blue}{3}}</m> donc <m>{}^tE</m> est de taille <m>{\color{blue}{3}}\times {\color{orange}{1}}</m>.</p>
+        <p><m>A</m> aussi, donc <m>A+{}^tE</m> est définie, et <m>A+{}^tE</m> est de taille <m>{\color{blue}{3}}\times {\color{orange}{1}}</m>.</p>
+        <p>Enfin, <m>B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m> donc <m>{}^tB</m>  est de taille <m>{\color{purple}{6}}\times {\color{blue}{3}}</m>.</p>
+        <p>Enfin, pour le produit de <m>{}^tB</m> par <m>A+{}^tE</m>,</p>
+        <me>({\color{purple}{6}}\times {\color{blue}{3}})\cdot ({\color{blue}{3}}\times {\color{orange}{1}}) \leadsto {\color{purple}{6}}\times {\color{orange}{1}} </me></feedback>
+        </condition>
+        </var>
+
+          <var>
+        <condition string="impossible"><feedback><p>C'est ça !</p></feedback></condition>
+        <condition string="dfjgq">
+          <feedback><p><m>A</m> est de taille <m>{\color{blue}{3}}\times {\color{orange}{1}}</m>, donc <m>2A</m> aussi.</p>
+          <p><m>C</m> est de taille <m>{\color{purple}{6}} \times {\color{teal}{2}}</m>, donc pas de la même taille que <m>2A</m>.</p>
+          <p>Donc la somme <m>2A+C</m> n'est pas définie.</p></feedback>
+        </condition>
+        </var>
+
+        <var>
+        <condition string="2x3"><feedback><p>C'est ça !</p></feedback></condition>
+        <condition string="dfjgq"><feedback>
+         <p><m>C</m> est de taille <m>{\color{purple}{6}} \times {\color{teal}{2}}</m>, donc <m>{}^tC</m> est de taille <m>{\color{teal}{2}} \times {\color{purple}{6}}</m>, tout comme <m>D</m>.</p>
+         <p>Donc la somme <m>{}^tC + D</m> est définie, et <m>{}^tC+D</m> est de taille  <m>{\color{teal}{2}} \times {\color{purple}{6}}</m>.</p>
+         <p><m>B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m> donc <m>{}^tB</m>  est de taille <m>{\color{purple}{6}}\times {\color{blue}{3}}</m>.</p>
+         <p>Et pour le produit de <m>{}^tC + D</m> par <m>{}^tB</m>,</p>
+         <me>({\color{teal}{2}} \times {\color{purple}{6}})\cdot ({\color{purple}{6}}\times {\color{blue}{3}}) \leadsto {\color{teal}{2}} \times {\color{blue}{3}}</me>
+       </feedback>
+        </condition>
+        </var>
+
+         <var><condition string="impossible"><feedback><p>C'est ça !</p></feedback></condition>
+        <condition string="dfjgq"><feedback>
+          <p>Pour le produit <m>CD</m>, on a</p>
+          <me>({\color{purple}{6}} \times {\color{teal}{2}})\cdot({\color{teal}{2}} \times {\color{purple}{6}}) \leadsto  {\color{purple}{6}} \times {\color{purple}{6}}</me>
+          <p><m>B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m> donc <m>{}^tB</m>  est de taille <m>{\color{purple}{6}}\times {\color{blue}{3}}</m>.</p>
+           <p><m>E</m> est de taille <m>{\color{orange}{1}}\times {\color{blue}{3}}</m> donc <m>{}^tE</m> est de taille <m>{\color{blue}{3}}\times {\color{orange}{1}}</m>.</p>
+           <p>Donc le produit <m>{}^tB{}^tE</m> donne</p>
+           <me>({\color{purple}{6}}\times {\color{blue}{3}})\cdot ({\color{blue}{3}}\times {\color{orange}{1}}) \leadsto {\color{purple}{6}}\times {\color{orange}{1}}</me>
+           <p>Donc <m>CD</m> et <m>{}^tB{}^tE</m> sont définis, mais pas de même taille, et donc leur somme n'est pas définie.</p></feedback>
+        </condition>
+        </var>
+
+         <var><condition string="3x6"><feedback><p>C'est ça !</p></feedback></condition>
+        <condition string="dfjgq"><feedback>
+          <p><m>D</m> est de taille <m>{\color{teal}{2}} \times {\color{purple}{6}}</m> donc <m>{}^tD</m> est de taille <m>{\color{purple}{6}} \times {\color{teal}{2}}</m>.</p>
+          <p>Donc le produit <m>B{}^tD</m> donne</p>
+          <me>({\color{blue}{3}}\times {\color{purple}{6}})\cdot ({\color{purple}{6}} \times {\color{teal}{2}}) \leadsto {\color{blue}{3}} \times {\color{teal}{2}}</me>
+          <p><m>C</m> est de taille <m>{\color{purple}{6}} \times {\color{teal}{2}}</m>, donc <m>{}^tC</m> est de taille <m>{\color{teal}{2}} \times {\color{purple}{6}}</m>.</p>
+          <p>Donc le produit <m>(B{}^tD){}^tC</m> donne</p>
+          <me>({\color{blue}{3}} \times {\color{teal}{2}}) \times ({\color{teal}{2}} \times {\color{purple}{6}}) \leadsto {\color{blue}{3}}\times {\color{purple}{6}}</me>
+          <p><m>(B{}^tD){}^tC</m> est de même taille que <m>B</m>, donc on peut les sommer, et <m>(B{}^tD){}^tC+B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m>.</p>
+        </feedback>
+        </condition>
+        </var>
+        
+      </setup>
+    </exercise>
+
+    <exercise  exercise-interactive="fillin-basic" >
+        <statement><p>Prenons maintenant les 5 matrices:</p>
+        <md>
+           <mrow> A=\begin{pmatrix}  3 \amp 0\\-1 \amp 2\\1 \amp 1\end{pmatrix},\ 
+            B=\begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix},\ 
+            C=\begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix}</mrow>
+           <mrow> D=\begin{pmatrix}  1 \amp 0 \amp 1\\-1 \amp 0 \amp 1\\3 \amp 2 \amp 1\end{pmatrix},\ 
+            E=\begin{pmatrix}  6 \amp 1 \amp 3\\-1 \amp 1 \amp 2\\4 \amp 1 \amp 3\end{pmatrix}
+          </mrow>
+        </md>
+          <p>Pour chacune des opérations ci-dessous, donner la première colonne de la matrice obtenue (par exemple, pour <m>\dfrac12 A</m>, taper <m>\boxed{3/2\ -1/2\quad 1/2}</m>). Si l'opératon n'est pas définie, taper <m>\boxed{\text{impossible}}</m>.</p>
+
+          <p><tabular>
+            <row><cell><m>-3(D+2E)</m></cell><cell><var /></cell></row>
+            <row><cell><m>2{}^tA+C</m></cell><cell><var /></cell></row>
+            <row><cell><m>(B-{}^tB)^2</m></cell><cell><var /></cell></row>
+            <row><cell><m>{}^t(2{}^tE-3{}^tD)</m></cell><cell><var /></cell></row>
+            <row><cell><m>CBA</m></cell><cell><var /></cell></row>
+            <row><cell><m>ABC-AC</m></cell><cell><var /></cell></row>
+            <row><cell><m>B^2+CA</m></cell><cell><var /></cell></row>
+            <row><cell><m>10\left(-D+2E\right)^{-1}</m></cell><cell><var /></cell></row>
+            <row><cell><m>10\left(-D^{-1}+2E^{-1}\right)</m></cell><cell><var /></cell></row>
+            <row><cell><m>(CA)^{-1}</m></cell><cell><var /></cell></row>
+            <row><cell><m>(AC)^{-1}</m></cell><cell><var /></cell></row>
+            <row><cell><m>A^{-1}C^{-1}</m></cell><cell><var /></cell></row>
+          </tabular></p>
+        </statement>
+
+
+        <setup>
+        <var> <condition string="-39 9 -33"><feedback><p>C'est ça !</p></feedback> </condition>
+        <condition string="dfjgq"><feedback><p>Le calcul donne</p><md>
+          <mrow>D+2E \amp = \begin{pmatrix}  1 \amp 0 \amp 1\\-1 \amp 0 \amp 1\\3 \amp 2 \amp 1\end{pmatrix} + 2 \begin{pmatrix}  6 \amp 1 \amp 3\\-1 \amp 1 \amp 2\\4 \amp 1 \amp 3\end{pmatrix}</mrow>
+          <mrow> \amp = \begin{pmatrix}  1 \amp 0 \amp 1\\-1 \amp 0 \amp 1\\3 \amp 2 \amp 1\end{pmatrix} +  \begin{pmatrix}  12 \amp 2 \amp 6\\-2 \amp 2 \amp 4\\8 \amp 2 \amp 6\end{pmatrix}</mrow>
+          <mrow> \amp = \begin{pmatrix}  13 \amp 2 \amp 7\\-3 \amp 2 \amp 5\\11 \amp 4 \amp 7\end{pmatrix}</mrow></md>
+          <p>donc <me>-3(D+2E) = \begin{pmatrix}  -39 \amp -6 \amp -21\\9 \amp -6 \amp -15\\-33 \amp -12 \amp -21\end{pmatrix}</me>.</p>
+        </feedback></condition>
+        </var>
+
+        <var> <condition string="7 1"><feedback><p>C'est ça !</p></feedback> </condition>
+        <condition string="dfjgq"><feedback><p>Le calcul donne</p><md>
+          <mrow>2{}^tA+C\amp = 2{}^t\begin{pmatrix}  3 \amp 0\\-1 \amp 2\\1 \amp 1\end{pmatrix} +\begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix} </mrow>
+          <mrow>\amp = 2\begin{pmatrix}  3 \amp -1 \amp 1\\0 \amp 2\amp 1 \end{pmatrix} +\begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix} </mrow>
+          <mrow>\amp = \begin{pmatrix}  6 \amp -2 \amp 2\\0 \amp 4\amp 2 \end{pmatrix} +\begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix} </mrow>
+          <mrow>\amp = \begin{pmatrix}  7 \amp 2 \amp 4\\1 \amp 5\amp 7 \end{pmatrix} </mrow>
+        </md></feedback> </condition>
+        </var>
+
+        <var> <condition string="-1 0"><feedback><p>C'est ça !</p></feedback> </condition>
+        <condition string="dfjgq"><feedback><p>Le calcul donne</p><md>
+        <mrow>B-{}^tB \amp= \begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix} - {}^t\begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix}</mrow>
+        <mrow>\amp = \begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix} - \begin{pmatrix}  4 \amp 0\\1 \amp 2\end{pmatrix}</mrow>
+        <mrow>\amp = \begin{pmatrix}  0 \amp -1\\1 \amp 0\end{pmatrix} </mrow></md>
+        <p>donc</p>
+        <me>(B-{}^tB)^2 = \begin{pmatrix}  0 \amp -1\\1 \amp 0\end{pmatrix}\begin{pmatrix} 0 \amp -1\\1 \amp 0\end{pmatrix}=\begin{pmatrix}  -1 \amp 0\\0 \amp -1\end{pmatrix}</me></feedback>
+        </condition>
+        </var>
+
+        <var> <condition string="9 1 -1"><feedback><p>C'est ça !</p></feedback> </condition>
+        <condition string="dfjgq"><feedback><p>Le calcul donne</p><md>
+        <mrow>2{}^tE-3{}^tD \amp = 2{}^t\begin{pmatrix}  6 \amp 1 \amp 3\\-1 \amp 1 \amp 2\\4 \amp 1 \amp 3\end{pmatrix} - 3 {}^t\begin{pmatrix}  1 \amp 0 \amp 1\\-1 \amp 0 \amp 1\\3 \amp 2 \amp 1\end{pmatrix}</mrow>
+        <mrow> \amp = 2\begin{pmatrix}  6 \amp -1 \amp 4\\1 \amp 1 \amp 1\\3 \amp 2 \amp 3\end{pmatrix} - 3 \begin{pmatrix}  1 \amp -1 \amp 3\\0 \amp 0 \amp 2\\1 \amp 1 \amp 1\end{pmatrix}</mrow>
+        <mrow> \amp = \begin{pmatrix}  12 \amp -2 \amp 8\\2 \amp 2 \amp 2\\6 \amp 4 \amp 6\end{pmatrix} -  \begin{pmatrix} 3  \amp -3 \amp 9\\0 \amp 0 \amp 6\\3 \amp 3 \amp 3\end{pmatrix}</mrow>
+        <mrow> \amp = \begin{pmatrix}  9 \amp 1 \amp -1\\2 \amp 2 \amp -4\\3 \amp 1 \amp 3\end{pmatrix} </mrow></md>
+        <p>donc <m>{}^t(2{}^tE-3{}^tD)=\begin{pmatrix}  9 \amp 2 \amp 3\\1 \amp 2 \amp 1\\-1 \amp -4 \amp 3\end{pmatrix}</m>.</p>
+        <p><em>Remarque: </em> On peut utiliser les propriétés de la transposée pour simplifier le calcul:</p>
+        <me>{}^t(2{}^tE-3{}^tD)= 2{}^t({}^tE) - 3 {}^t({}^t D) = 2E-3D</me></feedback>
+        </condition>
+        </var>
+
+        <var> <condition string="impossible"><feedback><p>C'est ça !</p></feedback> </condition>
+        <condition string="dfjgq"><feedback><p><m>C</m> est de taille <m>2\times {\color{red}3}</m> et <m>B</m> est de taille <m>{\color{red} 2}\times 2</m>, donc le produit <m>CB</m> n'existe pas. Et donc, <m>CBA</m> non plus !</p></feedback> </condition>
+        </var>
+
+        <var> <condition string="6 0 3"><feedback><p>C'est ça !</p></feedback> </condition>
+        <condition string="dfjgq">
+         <feedback><p>On calcule</p><md>
+         <mrow>ABC \amp =\begin{pmatrix}  3 \amp 0\\-1 \amp 2\\1 \amp 1\end{pmatrix}\begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix}\begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix}</mrow>
+         <mrow> \amp =\begin{pmatrix} 12\amp  -3 \\-4 \amp 5\\4 \amp 1\end{pmatrix}\begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix}</mrow>
+         <mrow> \amp =\begin{pmatrix} 9\amp 45 \amp 9 \\1 \amp -11 \amp 17 \\5 \amp 17 \amp 13\end{pmatrix}</mrow></md>
+         <p>et d'un autre côté</p>
+         <md><mrow>AC \amp = \begin{pmatrix}  3 \amp 0\\-1 \amp 2\\1 \amp 1\end{pmatrix} \begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix}</mrow>
+         <mrow>\amp =\begin{pmatrix}  3 \amp 12 \amp 6\\1 \amp -2 \amp 8\\2 \amp 5 \amp 7 \end{pmatrix} </mrow>
+       </md>
+       <p>donc</p>
+       <me>ABC-AC = \begin{pmatrix}  6 \amp 33 \amp 3\\0 \amp -9 \amp 9\\3 \amp 12 \amp 6 \end{pmatrix}</me></feedback>
+        </condition>
+        </var>
+
+        <var> <condition string="17 7"><feedback><p>C'est ça !</p></feedback> </condition>
+        <condition string="dfjgq"> <feedback><p>On calcule</p><md>
+          <mrow>B^2+CA\amp = \begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix}\begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix} + \begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix}\begin{pmatrix}  3 \amp 0\\-1 \amp 2\\1 \amp 1\end{pmatrix}</mrow>
+          <mrow>\amp = \begin{pmatrix}  16 \amp -6\\0 \amp 4\end{pmatrix} + \begin{pmatrix}  1 \amp 10 \\7 \amp 7 \end{pmatrix}</mrow>
+          <mrow>\amp = \begin{pmatrix}  17 \amp 4\\7 \amp 11\end{pmatrix} </mrow>
+        </md>
+        </feedback></condition>
+        </var>
+
+        <var> <condition string="1 2 -1"><feedback><p>C'est ça !</p></feedback> </condition>
+        <condition string="dfjgq">
+          <feedback><p>On calcule</p>
+          <me>-D+2E=-\begin{pmatrix}  1 \amp 0 \amp 1\\-1 \amp 0 \amp 1\\3 \amp 2 \amp 1\end{pmatrix}+2\begin{pmatrix}  6 \amp 1 \amp 3\\-1 \amp 1 \amp 2\\4 \amp 1 \amp 3\end{pmatrix}=\begin{pmatrix}  11 \amp 2 \amp 5\\-1 \amp 2 \amp 3\\5 \amp 0 \amp 5\end{pmatrix}</me>
+          <p>De là, avec la méthode d'inversion de Gauss:</p>
+          <image source="https://i.ibb.co/23nchzc/inv-D-2-E-1.png"/>
+          <image source="https://i.ibb.co/dm5YKd0/inv-D-2-E-2.png"/>
+          <p>et donc <m>10(-D+2E)^{-1}=10\begin{pmatrix}  \frac1{10} \amp -\frac1{10} \amp -\frac1{25}\\\frac1{5} \amp \frac3{10} \amp -\frac{19}{50}\\-\frac1{10} \amp \frac1{10} \amp \frac6{25}\end{pmatrix} =\begin{pmatrix}  1 \amp -1 \amp -\frac25\\2 \amp 3 \amp -\frac{19}{5}\\-1 \amp 1 \amp \frac{12}{5}\end{pmatrix} </m>.</p>
+        </feedback>
+        </condition>
+        </var>
+
+         <var> <condition string="5 120 -55"><feedback><p>C'est ça !</p></feedback> </condition>
+        <condition string="dfjgq"><feedback>
+          <p>On calcule, à l'aide de la méthode d'inversion de Gauss (cliquer pour agrandir),</p>
+          <image source="https://i.ibb.co/gPbnm9Q/inv-D.png"/>
+          <image source="https://i.ibb.co/qBCH1Jh/inv-E.png"/>
+          <p>donc</p>
+          <me>-D^{-1}+2E^{-1} = 
+            -\frac12\begin{pmatrix}1 \amp -1 \amp 0\\-2 \amp 1 \amp 1\\1 \amp 1 \amp 0\end{pmatrix}
+            +\begin{pmatrix}1 \amp 0 \amp -1\\11 \amp 6 \amp -15\\-5 \amp -2 \amp 7\end{pmatrix}=
+            \frac12\begin{pmatrix}1 \amp 1 \amp -2\\24 \amp 11 \amp -31\\-11 \amp -5 \amp 14\end{pmatrix}</me>
+            <p>et donc en fin de compte</p>
+            <me>10(-D^{-1}+2E^{-1}) = \begin{pmatrix}5 \amp 5 \amp -10\\120 \amp 55 \amp -155\\-55 \amp -25 \amp 70\end{pmatrix}</me>
+          </feedback>          
+        </condition>
+        </var>
+         <var> <condition string="-1/9 1/9"><feedback><p>C'est ça !</p></feedback> </condition>
+        <condition string="dfjgq"><feedback>
+          <p>On calcule (en fait, on a déjà calculé)</p>
+          <me>CA = \begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix}\begin{pmatrix}  3 \amp 0\\-1 \amp 2\\1 \amp 1\end{pmatrix} =  \begin{pmatrix}  1 \amp 10 \\7 \amp 7 \end{pmatrix}</me>
+          <p>Du coup, <m>\det(CA) = 1\cdot 7 - 7 \cdot 10 = -63 \neq 0</m>, donc <m>CA</m> est inversible et </p>
+          <me>(CA)^{-1} = \dfrac1{-63}\begin{pmatrix}7\amp -10\\ -7 \amp 1\end{pmatrix} =  \begin{pmatrix}-\dfrac1{9}\amp \dfrac{10}{63}\\ \dfrac1{9} \amp -\dfrac1{63}\end{pmatrix}</me>
+        </feedback>          
+        </condition>
+        </var>
+
+
+         <var> <condition string="impossible"><feedback><p>C'est ça !</p></feedback> </condition>
+        <condition string="dfjgq"><feedback><p>On calcule</p>
+        <md><mrow>AC\amp =\begin{pmatrix}  3 \amp 0\\-1 \amp 2\\1 \amp 1\end{pmatrix} \begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix}</mrow>
+        <mrow>\amp \begin{pmatrix}  3 \amp 12 \amp 6\\1 \amp -2 \amp 8 \\2 \amp 5 \amp 7\end{pmatrix} </mrow>
+      </md>
+      <p>Mais, si on essaie d'inverser <m>AC</m>, on tombe sur un os:</p>
+      <image source="https://i.ibb.co/WxpWWX3/inv-CA.png"/>
+      <p><m>\leadsto\ AC</m> n'est pas inversible, donc l'opération est impossible.</p>
+        </feedback></condition>
+        </var>
+
+
+         <var> <condition string="impossible"><feedback><p>C'est ça !</p></feedback> </condition>
+        <condition string="dfjgq"><feedback><p><m>A</m> et <m>C</m> ne sont pas des matrices carrées, donc elles ne sont pas inversibles.</p></feedback></condition>
+        </var>
+      </setup>
+
+    </exercise>
+
+  </exercises>
+
+  <exercises>
+    <title>Inverses de matrices</title>
+
+      <exercise exercise-interactive="multiplechoice">
+        <statement>
+          <p>Dans cet exercice, <m>A,B,C</m> et <m>D</m> sont toutes des matrices carrées de même taille <m>n\times n</m>.</p>
+        <p>Sélectionner toutes les affirmations correctes:</p></statement>
+        <choices multiple-correct="yes">
+
+      <choice correct="">
+        <statement><p>Si <m>B</m> est inversible, l'inverse de <m>2B</m> est <m>2B^{-1}</m></p></statement>
+      <feedback><p>Non, car   </p>
+        <me>(2B)(2B^{-1})= 4 B B^{-1} = 4 I_n \neq I_n</me>
+    </feedback>
+    </choice>
+
+       <choice correct="yes">
+        <statement><p>Si <m>B</m> est inversible, l'inverse de <m>2B</m> est <m>\frac12B^{-1}</m></p></statement>
+      <feedback><p>C'est ça ! Pour le vérifier, on calcule</p>
+        <me>(2B)(\frac12B^{-1})= 2\cdot\frac12 \cdot B B^{-1} =  I_n </me>
+    </feedback>
+    </choice>
+
+     <choice correct="yes">
+        <statement><p>Si <m>2A</m> est l'inverse de <m>BC</m>, alors <m>C=\frac12 B^{-1}A^{-1}</m>.</p></statement>
+      <feedback><p>Exactement ! On a alors</p>
+    <md>
+      <mrow>2A = (BC)^{-1}=C^{-1}B^{-1}\amp\iff 2AB = C^{-1}</mrow>
+      <mrow>\amp \iff C = (2AB)^{-1} = \frac12 B^{-1}A^{-1}</mrow>
+    </md>
+  </feedback>
+    </choice>
+
+     <choice correct="">
+        <statement><p>L'inverse de <m>ABC</m> est <m>C^{-1}A^{-1}B^{-1}</m></p></statement>
+      <feedback><p>Non, car <m>(ABC)(C^{-1}A^{-1}B^{-1})</m> ne donne généralement pas <m>I_n</m>:</p> 
+        <md>
+          <mrow>(ABC)(C^{-1}A^{-1}B^{-1})\amp= AB(CC^{-1})A^{-1}B^{-1}</mrow>
+          <mrow>\amp =  AB I_n A^{-1}B^{-1}</mrow>
+          <mrow> \amp = ABA^{-1}B^{-1}</mrow></md> 
+        <p><m>\leadsto</m> On ne peut plus simplifier ! Par contre,</p>
+         <md>
+          <mrow>(ABC)(C^{-1}B^{-1}A^{-1}) \amp = AB(CC^{-1})B^{-1}A^{-1} </mrow>
+          <mrow>\amp  = AB I_n B^{-1}A^{-1}</mrow>
+          <mrow>\amp =A (BB^{-1})A^{-1} </mrow>
+          <mrow> \amp= AI_n A^{-1} = AA^{-1}=I_n</mrow>
+         </md>
+      <p>donc l'inverse de <m>ABC</m> est <m>C^{-1}B^{-1}A^{-1}</m>.</p>
+  </feedback>
+    </choice>
+    
+     <choice correct="yes">
+        <statement><p>Si <m>A</m> et <m>B</m> commutent (c'est-à-dire, si <m>AB=BA</m>) alors l'inverse de <m>ABC</m> est <m>C^{-1}A^{-1}B^{-1}</m></p></statement>
+      <feedback><p>C'est vrai, car dans ce cas <m>ABC = BAC</m> et on a </p>
+      <me>(ABC)(C^{-1}A^{-1}B^{-1}) = (BAC)(C^{-1}A^{-1}B^{-1}) = BA (CC^{-1})A^{-1}B^{-1} = BA I_n A^{-1}B^{-1} = BAA^{-1}B^{-1} = BB^{-1}=I_n</me>
+    </feedback>
+    </choice>
+
+        <choice correct="">
+        <statement><p>Si l'inverse de <m>A</m> est <m>A</m>, alors <m>A=I_n</m>.</p></statement>
+      <feedback><p>Pas forcément ! <m>I_n</m> est en effet égale à son inverse, mais ce n'est pas la seule.  </p>
+        <p>Par exemple, pour <m>n=2</m>, les matrices suivantes sont égales à leur inverse:</p> 
+      <me>\begin{pmatrix}-1\amp 0\\0\amp -1\end{pmatrix},\quad \begin{pmatrix}-1\amp 0\\0\amp 1\end{pmatrix}, \quad \begin{pmatrix}1\amp 0\\0\amp -1\end{pmatrix}</me>
+    </feedback>
+    </choice>
+
+
+    </choices>
+  </exercise>
+
+  <exercise exercise-interactive="multiplechoice">
+    <statement><p>On note <m>A=\begin{pmatrix}1\amp1 \\2\amp 3\end{pmatrix}</m>. Sélectionner l'option correcte:</p></statement>
+        <choices multiple-correct="no">
+
+      <choice correct="">
+        <statement><m>A</m> n'est pas inversible.</statement>
+      <feedback>
+    </feedback>
+    </choice>
+
+        <choice correct="">
+        <statement><m>A^{-1} = \begin{pmatrix}1\amp 2 \\ 1 \amp 3\end{pmatrix}</m>.</statement>
+      <feedback>
+    </feedback>
+    </choice>
+
+       <choice correct="yes">
+        <statement><m>A^{-1} = \begin{pmatrix}3\amp -1 \\ -2 \amp 1\end{pmatrix}</m>.</statement>
+      <feedback>
+    </feedback>
+    </choice>
+
+      <choice correct="">
+        <statement><m>A^{-1} = \begin{pmatrix}3\amp -1 \\ -1 \amp 2\end{pmatrix}</m>.</statement>
+      <feedback>
+    </feedback>
+    </choice>
+  </choices>
+  </exercise>
+
+
+  <exercise exercise-interactive="multiplechoice">
+    <statement><p>Soit <m>\lambda</m> un nombre réel ou complexe. On note <m>A=\begin{pmatrix}\lambda \amp 2 \\-3\amp 4\end{pmatrix}</m>.</p>
+      <p> Sélectionner la ou les options correctes:</p></statement>
+        <choices multiple-correct="yes">
+
+      <choice correct="">
+        <statement>Quel que soit <m>\lambda \in \mathbb{R}</m>, <m>A</m> est inversible.</statement>
+      <feedback>
+    </feedback>
+    </choice>
+
+    <choice correct="">
+        <statement>Quel que soit <m>\lambda \in \mathbb{C}</m>, <m>A</m> est inversible.</statement>
+      <feedback>
+    </feedback>
+    </choice>
+
+    <choice correct="yes">
+        <statement> Si <m>\lambda =2</m>, <m>A</m> est inversible.</statement>
+      <feedback> <p>C'est vrai : dans ce cas, <m>\det(A) = 8+6 = 14\neq 0</m>/</p>
+    </feedback>
+    </choice>
+
+      <choice correct="yes">
+        <statement> Si <m>\lambda =\frac32</m>, <m>A</m> est inversible.</statement>
+      <feedback> <p>C'est vrai : dans ce cas, <m>\det(A) = 6+6 = 12\neq 0</m>/</p>
+    </feedback>
+    </choice>
+
+        <choice correct="">
+        <statement> Si <m>\lambda =-\frac32</m>, <m>A</m> est inversible.</statement>
+      <feedback> <p>C'est faux : dans ce cas, <m>\det(A) = -6+6 = 0</m>/</p>
+    </feedback>
+    </choice>
+
+  </choices>
+  </exercise>
+
+
+ 
+
+  <exercise exercise-interactive="truefalse">
+    <statement correct="yes">
+      <p>Si <m>A=\begin{pmatrix}1\amp3\amp5 \\0\amp2\amp 4 \\ 0 \amp 0 \amp 3\end{pmatrix}</m> alors  <m>A^{-1}=\begin{pmatrix}1\amp -\frac32\amp \frac13 \\0\amp \frac12\amp -\frac23 \\ 0 \amp 0 \amp \frac13\end{pmatrix}</m>.</p>
+          </statement>
+    <feedback>
+      <p>C'est vrai :  si on multiplie ces deux matrices, on trouve <m>I_3</m>.</p>
+      <p></p>   
+    </feedback>
+  </exercise>
+
+     
+
+  <exercise exercise-interactive="truefalse">
+
+     <statement correct="">
+      <p>Si <m>A=\begin{pmatrix}1\amp3\amp5 \\0\amp2\amp 4 \\ 0 \amp 0 \amp 3\end{pmatrix}</m> alors  <m>A^{-1}=\begin{pmatrix}1\amp \frac32\amp \frac13 \\0\amp \frac12\amp \frac23 \\ 0 \amp 0 \amp \frac13\end{pmatrix}</m>.</p>
+          </statement>
+    <feedback>
+      <p>C'est faux :  si on multiplie ces deux matrices, on trouve <m>\begin{pmatrix}1\amp3\amp \frac{17}3 \\0\amp 1\amp \frac83 \\ 0 \amp 0 \amp 1\end{pmatrix} \neq I_3</m>.</p>
+    </feedback>
+    </exercise>
+
+  <exercise exercise-interactive="truefalse">
+
+     <statement correct="yes">
+      <p>Si <m>B=\begin{pmatrix}1\amp 0 \amp 0 \\ 3 \amp 2 \amp 0 \\ 5 \amp 4 \amp 3 \end{pmatrix}</m> alors  <m>B^{-1}=\begin{pmatrix}1\amp 0 \amp 0 \\ -\frac32\amp \frac12 \amp 0 \\\frac13\amp -\frac23\amp \frac13\end{pmatrix}</m>.</p>
+          </statement>
+    <feedback>
+      <p>C'est vrai :  si on multiplie ces deux matrices, on trouve <m>I_3</m>.</p>
+      <p>On peut aussi remarquer que <m>B=A^\top</m>, donc <m>B^{-1} = (A^{-1})^\top</m>.</p>
+    </feedback>
+  </exercise>
+
+  </exercises>
+
+
+
+  <exercises>
+    <title>Echelonnage de matrices</title>
+
+      <exercise exercise-interactive="multiplechoice">
+        <statement>
+          <p>On considère les matrices suivantes:</p>
+          <md>
+          <mrow>  A=\begin{pmatrix} 1 \amp 1 \amp 0 \amp 0\\0 \amp 1 \amp 0 \amp 1\\0 \amp 1 \amp 1 \amp 1\\0 \amp 0 \amp 1 \amp 0 \end{pmatrix},\quad
+            B=\begin{pmatrix} 1 \amp 0 \amp 1 \amp 0\\0 \amp 1 \amp 0 \amp 1\\0 \amp 0 \amp 1 \amp 0\\0 \amp 0 \amp 0 \amp 0 \end{pmatrix},\quad</mrow>
+            <mrow> C=\begin{pmatrix} 1 \amp 0 \amp 1 \amp 0\\0 \amp 1 \amp 0 \amp 0\\0 \amp 0 \amp 0 \amp 1\\0 \amp 0 \amp 0 \amp 0 \end{pmatrix},\quad
+           D=\begin{pmatrix} 1 \amp 0 \amp 1 \amp 0\\0 \amp 1 \amp 0 \amp 0\\0 \amp 0 \amp 0 \amp 0\\0 \amp 0 \amp 0 \amp 1 \end{pmatrix}</mrow>
+          </md>
+        <p>Sélectionner toutes les affirmations correctes:</p></statement>
+        <choices multiple-correct="yes">
+
+      <choice correct="">
+        <statement><p><m>A</m> est échelonnée.</p></statement>
+      <feedback><p>C'est faux : si c'était le cas, chaque ligne de <m>A</m> aurait son premier coefficient non nul plus à droite que la ligne du dessus. Or, les lignes <m>2</m> et <m>3</m> de <m>A</m> ont leur premier coefficience non nul sur la deuxième colonne.     </p>
+    </feedback>
+    </choice>
+
+     <choice correct="">
+        <statement><p><m>A</m> est échelonnée réduite.</p></statement>
+      <feedback><p>C'est faux, car elle n'est même pas échelonnée. Si c'était le cas, chaque ligne de <m>A</m> aurait son premier coefficient non nul plus à droite que la ligne du dessus. Or, les lignes <m>2</m> et <m>3</m> de <m>A</m> ont leur premier coefficience non nul sur la deuxième colonne.     </p>
+    </feedback>
+    </choice>
+
+       <choice correct="yes">
+        <statement><p><m>B</m> est échelonnée.</p></statement>
+      <feedback><p>C'est vrai : </p>
+        <ul>
+          <li> La ligne nulle de <m>B</m> n'est suivie d'aucune ligne non nulle:</li>
+          <li> Chaque ligne non nulle de <m>B</m> a son premier coefficient non nul plus à droite que la ligne précédente;</li>
+          <li> Chaque ligne non nulle de <m>B</m> a un <m>1</m> comme premier coefficient non nul.</li>
+        </ul>
+    </feedback>
+    </choice>
+
+     <choice correct="">
+        <statement><p><m>B</m> est échelonnée réduite.</p></statement>
+      <feedback><p>C'est faux : si elle était échelonnée réduite, sur chaque colonne contenant un pivot, le pivot serait le seul coefficient non nul.</p>
+        <p>Or, sur la troisième colonne de <m>B</m>, il y a un coefficient non nul au-dessus du pivot.     </p>
+    </feedback>
+    </choice>
+
+       <choice correct="yes">
+        <statement><p><m>C</m> est échelonnée.</p></statement>
+      <feedback><p>C'est vrai : </p>
+        <ul>
+          <li> La ligne nulle de <m>C</m> n'est suivie d'aucune ligne non nulle:</li>
+          <li> Chaque ligne non nulle de <m>C</m> a son premier coefficient non nul plus à droite que la ligne précédente;</li>
+          <li> Chaque ligne non nulle de <m>C</m> a un <m>1</m> comme premier coefficient non nul.</li>
+        </ul>
+    </feedback>
+    </choice>
+
+     <choice correct="yes">
+        <statement><p><m>C</m> est échelonnée réduite.</p></statement>
+      <feedback><p>C'est vrai : <m>C</m> est échelonnée, et sur chaque colonne contenant un pivot, le pivot est le seul coefficient non nul.</p>
+    </feedback>
+    </choice>
+
+       <choice correct="">
+        <statement><p><m>D</m> est échelonnée.</p></statement>
+      <feedback><p>C'est faux : sinon, toutes les lignes suivant une ligne nulle devraient être nulles. </p>
+        <p>Mais ici, la troisième ligne de <m>D</m> est nulle et pas la suivante.</p>
+    </feedback>
+    </choice>
+
+     <choice correct="">
+        <statement><p><m>D</m> est échelonnée réduite.</p></statement>
+      <feedback><p>C'est faux : si elle était échelonnée réduite, elle serait échelonnée. Dans ce cas,  toutes les lignes suivant une ligne nulle devraient être nulles. </p>
+        <p>Mais ici, la troisième ligne de <m>D</m> est nulle et pas la suivante.</p>
+    </feedback>
+    </choice>
+
+    </choices>
+  </exercise>
+
+
+   <exercise  exercise-interactive="fillin-basic" >
+        <statement><p>Considérons la matrice:</p>
+        <me>A=\begin{pmatrix}1 \amp - 2 \amp 3 \amp 4 \\ 1\amp-1\amp 3 \amp 4\\ 0 \amp 2 \amp 4\amp 1 \\ 1 \amp 3 \amp 7 \amp 5\end{pmatrix}</me>
+
+         <p>Alors  le rang de A est <var /></p>
+          
+      </statement><setup>
+        <var>
+        <condition string="3"><feedback><p>C'est ça !</p></feedback></condition>
+        <condition string="dfjgq"><feedback>
+          <p>Une forme échelonnée de <m>A</m> est </p>
+        <me>A=\begin{pmatrix}\boxed{1} \amp - 2 \amp 3 \amp 4 \\ 0\amp \boxed{1} \amp 0 \amp 0\\ 0 \amp 0 \amp \boxed{1}\amp \frac14 \\ 0 \amp 0 \amp 0 \amp 50\end{pmatrix}</me>
+<p>Il y a trois pivots (encadrés ci-dessus) donc <m>\rg(A)=3</m>.</p>
+           </feedback>
+        </condition>
+        </var>
+        
+
+
+        
+      </setup>
+    </exercise>
+
+
+</exercises>
+
+
+
+
+
+
+</section>
+
+
+<section>
+  <title><mdash /> Erreurs à ne pas faire</title>
+
+<assemblage>
+    <p>C'est surtout le produit matriciel qui peut poser problème:</p>
+    <p><ul>
+        <li><p> En général, <alert>le produit de matrices n'est pas commutatif</alert>: si <m>A,B</m> sont deux matrices, on a généralement <m>\boxed{AB \neq BA}</m>.</p>
+        <p> La commutativité peut prendre l'eau de différentes manières: </p>
+                        <p><ul>
+                          <li><p> Il se peut que <m>AB</m> soit défini mais pas <m>BA</m>:</p>
+                          <p><example><p>Notons <m>A=\begin{pmatrix}1\amp 2\amp 3\\2\amp 3\amp 4\\0\amp 0\amp 1\end{pmatrix}
+                            \in \mathcal M_{3}(\R),</m>, <m>B=\begin{pmatrix} 1\amp 2\\-1\amp 1\\1\amp 2
+                              \end{pmatrix}\in  \mathcal M_{{\color{purple}{3}},{\color{orange}{2}}}(\R).</m>.</p>
+                                <p>Est-ce que <m>AB</m> existe ? Et <m>BA</m> ?</p>
+                              <solution>
+                              <p><m>A</m> est de taille <m>{\color{purple}{3}}\times {\color{purple}{3}}</m>, B est de taille <m>{\color{purple}{3}}\times {\color{orange}{2}}</m> donc <m>AB</m> existe, mais pas <m>BA</m> (Essayez !)</p></solution></example></p></li>
+                          <li><p> Il se peut que <m>AB</m> et <m>BA</m> n'aient pas la même taille: </p>
+                          <example>
+                          <p>✑ Calculez <m>AB</m> et <m>BA</m> avec <m>A=\begin{pmatrix}1\amp 2\amp 3\\1\amp 1\amp 1\end{pmatrix}, 
+                          B=\begin{pmatrix}1\amp 0\\-1\amp 0\\0\amp 1\end{pmatrix}.</m></p>
+                          <solution><figure>
+                         <image source="https://i.ibb.co/fGDMxMw/gif-mult-noncomm1.gif"/><image source="https://i.ibb.co/3NTstcS/gif-mult-noncomm2.gif"/>
+                         <caption> Source: <url href="http://matrixmultiplication.xyz"/></caption></figure> </solution></example></li>
+                        <li><p> Il se peut que <m>AB</m> et <m>BA</m> existent, aient la même taille mais <m>AB\neq BA</m>:</p>
+                        <example><p>✑  Calculez <m>AB</m> et <m>BA</m> avec <m>A=\begin{pmatrix}5\amp -1\\2\amp 2\end{pmatrix}, B=\begin{pmatrix} 1\amp 1\\2\amp 0\end{pmatrix}.</m></p>
+                        <solution><figure><image source="https://i.ibb.co/syQNJbc/gif-mult-noncomm3.gif"/><image source="https://i.ibb.co/GRTfB0X/gif-mult-noncomm4.gif"/><caption> Source: <url href="http://matrixmultiplication.xyz"/></caption></figure>
+                      </solution></example></li></ul></p>
+          </li>
+        <li><p><alert>Conséquence de la non-commutativité:</alert> si <m>AB\neq BA</m>, on peut   avoir</p>
+        <me>(A+B)^n \neq \sum_{k=0}^n\binom{n}{k}A^kB^{n-k}</me>
+        <example><p>Notons <m>A=\begin{pmatrix}6\amp 4\\-9\amp -6\end{pmatrix},B= \begin{pmatrix}0\amp 0\\1\amp 0\end{pmatrix}</m>.</p>
+        <p>Calculer <m>AB</m> et <m>BA</m>, puis comparer  <m>(A+B)^2</m> et <m>A^2+2AB+B^2</m>.  </p>
+       <solution><p>On trouve:</p>
+       <md><mrow>AB= \begin{pmatrix}  4\amp 0\\-6\amp 0\end{pmatrix},\ BA = \begin{pmatrix}  0\amp 0\\6\amp 4\end{pmatrix}</mrow>
+        <mrow>(A+B)^2 = \begin{pmatrix}  4\amp 0\\0\amp 4\end{pmatrix}</mrow>
+        <mrow>A^2+2AB+B^2 = \begin{pmatrix}  8\amp 0\\-12\amp 0\end{pmatrix}</mrow>
+        </md></solution></example></li>
+
+           <li><p><alert>Autre conséquence de la non-commutativité:</alert> en général, si <m>A, P \in \mathcal M_n{\R}</m> et <m>P</m>sont deux matrices carrées, et que <m>P</m> est inversible, alors généralement <m>\boxed{P^{-1}AP \neq A}</m>.</p>
+      <example><p>On note <m>A=\begin{pmatrix}2\amp -1\\-1\amp 2\end{pmatrix}, P=\begin{pmatrix}1\amp 1\\1\amp -1\end{pmatrix}</m>.</p>
+      <p>Calculer <m>P^{-1}</m>, puis <m>P^{-1}AP</m>.</p>
+      <solution><p><m>P^{-1}=\dfrac1{1\cdot(-1)-1}\begin{pmatrix}-1\amp -1\\-1\amp 1\end{pmatrix} = \frac12\begin{pmatrix}1\amp 1\\1\amp -1\end{pmatrix}</m> donc on a</p>
+      <me>P^{-1}AP=\frac12\begin{pmatrix}1\amp 1\\1\amp -1\end{pmatrix}\begin{pmatrix}2\amp -1\\-1\amp 2\end{pmatrix}\begin{pmatrix}1\amp 1\\1\amp -1\end{pmatrix}=\frac12\begin{pmatrix}1\amp 1\\1\amp -1\end{pmatrix}\begin{pmatrix}1\amp 3\\1\amp -3\end{pmatrix}=\begin{pmatrix}1\amp 0\\0\amp 3\end{pmatrix}</me>
+      <p>Donc <m>P^{-1}AP\neq A</m></p></solution></example></li>
+      <li><p>On peut avoir <m>A\neq 0_{n,p}</m>, <m>B\neq 0_{p,q}</m> mais <m>AB = 0_{nq}</m>.</p>
+       <example><p>✑  Calculer <m>AB</m> et <m>BA</m> pour</p>
+        <me>
+        A=\begin{pmatrix}0\amp 0 \amp 1\\0\amp 0 \amp 1\end{pmatrix}, 
+        B=\begin{pmatrix}2\amp -2\\-1\amp 1 \\ 0 \amp 0\end{pmatrix}.
+      </me>
+      <solution><figure>
+              <image source="https://i.ibb.co/jwQx5QM/gif-mult-noncomm5.gif"/><image source="https://i.ibb.co/ssJdPhS/gif-mult-noncomm6.gif"/>
+              <caption> Source: <url href="http://matrixmultiplication.xyz"/></caption>
+     </figure></solution></example></li>
+
+      <li><p>⚠ On peut avoir <m>AB=AC</m> mais <m>B \neq C</m>.</p>
+      <example><p>✑  Calculer <m>AB</m> et <m>AC</m> pour</p>
+      <me>A=\begin{pmatrix}0\amp -1\\0\amp 1\end{pmatrix},\ B=\begin{pmatrix}4\amp -1\\5\amp 4\end{pmatrix},\C=\begin{pmatrix}2\amp 5\\5\amp 4\end{pmatrix}.</me>
+      <solution><figure>
+        <image source="https://i.ibb.co/88t5GHV/gif-mult-noncomm7.gif"/><image source="https://i.ibb.co/88pz82D/gif-mult-noncomm8.gif"/>
+       <caption> Source: <url href="http://matrixmultiplication.xyz"/></caption></figure>
+     </solution></example></li>
+     
+
+      <li><p> On  peut avoir <m>A^p=0</m> mais <m>A\neq 0_{n,n}</m>.<fn> On dit dans ce cas que <m>A</m> est <em>nilpotente</em>.</fn></p>
+      <example><p>Posons <m>A=\begin{pmatrix}6\amp 4\\-9\amp -6\end{pmatrix}</m>. Calculer <m>A^2</m> et en déduire que <m>A^k=0</m> pour tout <m>k\geq 2</m>.</p>
+      <solution><me>A^2=\begin{pmatrix} 6\amp 4\\-9\amp -6 \end{pmatrix}\begin{pmatrix}  6\amp 4\\-9\amp -6  \end{pmatrix}= \begin{pmatrix}  0\amp 0\\0\amp 0\end{pmatrix}.</me>
+    <p>Donc , pour <m>k\geq 2</m>, <m>A^k=A^2A^{k-2}=0_{2,2}A^{k-2}= 0_{2,2}</m>.</p></solution></example></li>
+
+    <li><p>Si <m>A,B\in\mathcal M_n(\R)</m> sont inversibles, alors <m>AB</m> aussi, <alert>mais <m>(AB)^{-1}=B^{-1}A^{-1}</m></alert>, et non <m>A^{-1}B^{-1}</m>.</p></li>
+
+    <li><p>Pour deux matrices inversibles <m>A, B \in _mathcal M_n(\R)</m>, en général on n'a <alert>pas</alert> <m>(A+B)^{-1}=A^{-1}+B^{-1}</m>.</p>
+    <p><ul>
+          <li><p>Il se peut que <m>A</m> et <m>B</m> soient inversibles, mais que <m>A+B</m> ne le soit pas.</p>
+          <p>Par exemple, <m>I_n</m> et <m>-I_n</m> sont inversibles<fn>✑ Quel est l'inverse de <m>-I_n</m> ?</fn> mais <m>I_n+(-I_n)=0_{n}</m> ne l'est pas.</p></li>
+
+          <li><p>Il se peut que <m>A+B</m>  soit inversible, mais <m>(A+B)^{-1}\neq A^{-1}+B^{-1}</m>:</p>
+          <example><p>✑ Notons <m>A=2I_n</m> et <m>B=3I_n</m>. Que donnent <m>A+B</m>, <m>(A+B)^{-1}</m> et <m>A^{-1}+B^{-1}</m> ?</p>
+          <solution><me>A+B=5I_n, (A+B)^{-1}=\frac15 I_n, A^{-1}+B^{-1}=\frac 12 I_n + \frac 13 I_n = \frac56 I_n</me></solution></example></li>
+        </ul></p></li>
+
+      <li> <p> Soient <m>A \in \mathcal M_{n,p}(\K)</m>, <m>B \in \mathcal M_{p,q}(\K)</m>,alors <m>{}^t(AB)={}^tB{}^tA</m>, et non <m>{}^tA{}^tB</m>.</p>
+      <example><p>Supposons que <m>A</m> soit de taille <m>6\times 17</m> et <m>B</m> de taille <m>17\times 4</m>. Quelle sont les tailles de <m>{}^tA</m>, <m>{}^tB</m>, <m>AB</m>, <m>{}^t(AB)</m>? Est-ce que <m>{}^tA{}^tB</m> existe  ? Et <m>{}^tB{}^tA</m> ? </p>
+      <solution><p><tabular halign="center" top="minor" left="minor" bottom="minor" right="minor">
+      <row><cell><m>{}^tA</m></cell><cell><m>{}^t B</m></cell><cell><m>AB</m></cell><cell><m>{}^t(AB)</m></cell><cell><m>{}^tA{}^tB</m></cell><cell><m>{}^tB{}^tA</m></cell> </row>
+      <row><cell><m>17\times 6</m></cell><cell><m>4\times 17</m></cell><cell><m>6\times 4</m></cell><cell><m>4\times 6</m></cell><cell>n'existe pas</cell><cell><m>4\times 6</m></cell></row></tabular></p></solution></example></li>
+    </ul></p>
+ </assemblage>
+
+</section>
+
+  </article>
+</pretext>

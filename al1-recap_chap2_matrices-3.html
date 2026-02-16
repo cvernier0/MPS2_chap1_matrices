@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>— Testez vos réflexes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.14';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="al1-recap_chap2_matrices.html"><span class="title">Matrices</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="al1-recap_chap2_matrices.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="al1-recap_chap2_matrices.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="al1-recap_chap2_matrices-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\K}{\mathbb{K}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\L}{\mathcal L}
+\newcommand{\B}{\mathscr B}
+\newcommand{\M}{\mathcal M}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lbb}{\,]\,}
+\newcommand{\rbb}{\,[\,}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rg}{rg}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\Card}{Card}
+\DeclareMathOperator{\Vect}{Vect}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1 focused" data-preexpanded-levels="0" data-max-levels="1"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="al1-recap_chap2_matrices-3.html" class="internal"><span class="codenumber">1</span> <span class="title">— Testez vos réflexes</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="al1-recap_chap2_matrices-3.html#al1-recap_chap2_matrices-3-2" class="internal"><span class="codenumber">1</span> <span class="title">Vrai ou faux ?</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="al1-recap_chap2_matrices-4.html" class="internal"><span class="codenumber">2</span> <span class="title">— Entraînez-vous !</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="al1-recap_chap2_matrices-4.html#al1-recap_chap2_matrices-4-5" class="internal"><span class="codenumber">2</span> <span class="title">Opérations sur les matrices</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="al1-recap_chap2_matrices-4.html#al1-recap_chap2_matrices-4-6" class="internal"><span class="codenumber">2</span> <span class="title">Inverses de matrices</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="al1-recap_chap2_matrices-4.html#al1-recap_chap2_matrices-4-7" class="internal"><span class="codenumber">2</span> <span class="title">Echelonnage de matrices</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="al1-recap_chap2_matrices-5.html" class="internal"><span class="codenumber">3</span> <span class="title">— Erreurs à ne pas faire</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="al1-recap_chap2_matrices-3"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">— Testez vos réflexes</span>
+</h2>
+<section class="exercises" id="al1-recap_chap2_matrices-3-2"><h3 class="heading hide-type">
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Vrai ou faux ?</span>
+</h3>
+<article class="exercise exercise-like" id="al1-recap_chap2_matrices-3-2-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-3-2-2-1-1">Si <span class="process-math">\(D_1,D_2 \in \mathcal{M}_n(\mathbb{R})\)</span> sont deux matrices diagonales, alors <span class="process-math">\(D_1\)</span> et <span class="process-math">\(D_2\)</span> commutent:<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-3-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-2-1-2">
+\begin{equation*}
+D_1D_2 = D_2D_1
+\end{equation*}
+</div>
+<li data-component="answer" id="_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-3-2-2-2-1">C’est vrai !</div> <div class="para" id="al1-recap_chap2_matrices-3-2-2-2-2">Soient <span class="process-math">\(D_1,D_2\)</span> deux matrices diagonales, alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-2-2-3">
+\begin{equation*}
+D_1=\begin{pmatrix}  \lambda_1 \amp 0 \amp \dots \amp 0\\  0 \amp \lambda_2 \amp \dots \amp 0\\  \vdots \amp  \amp \ddots \amp \\
+0 \amp \dots \amp 0 \amp \lambda_n \end{pmatrix},
+D_2=\begin{pmatrix}  \mu_1 \amp 0 \amp \dots \amp 0\\  0 \amp \mu_2 \amp \dots \amp 0\\  \vdots \amp  \amp \ddots \amp \\  0 \amp \dots \amp 0 \amp \mu_n\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-2-2-4">donc</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-2-2-5">
+\begin{align*}
+D_1D_2\amp = \begin{pmatrix}\lambda_1\amp 0\amp \dots\amp 0\\ 0\amp \lambda_2\amp \dots\amp 0\\\vdots\amp \amp \ddots\amp \\  0\amp \dots\amp 0\amp \lambda_n\end{pmatrix}\begin{pmatrix} \mu_1\amp 0\amp \dots\amp 0\\ 0\amp \mu_2\amp \amp 0\\  \vdots\amp \vdots\amp \ddots\amp \vdots\\  0\amp 0\amp \dots\amp \mu_n\end{pmatrix}\\
+\amp=\begin{pmatrix} \lambda_1\mu_1\amp 0\amp \dots\amp 0\\  0\amp \lambda_2\mu_2\amp \dots\amp 0\\  \vdots\amp \amp \ddots\amp \\  0\amp \dots\amp 0\amp \lambda_n\mu_n\end{pmatrix} \\
+\amp=\begin{pmatrix} \mu_1\lambda_1\amp 0\amp \dots\amp 0\\  0\amp \mu_2\lambda_2\amp \dots\amp 0\\  \vdots\amp \amp \ddots\amp \\  0\amp \dots\amp 0\amp \mu_n\lambda_n\end{pmatrix}=D_2D_1
+\end{align*}
+</div>
+</li>
+<li data-component="answer" id="_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-3-2-2-2-1">C’est vrai !</div> <div class="para" id="al1-recap_chap2_matrices-3-2-2-2-2">Soient <span class="process-math">\(D_1,D_2\)</span> deux matrices diagonales, alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-2-2-3">
+\begin{equation*}
+D_1=\begin{pmatrix}  \lambda_1 \amp 0 \amp \dots \amp 0\\  0 \amp \lambda_2 \amp \dots \amp 0\\  \vdots \amp  \amp \ddots \amp \\
+0 \amp \dots \amp 0 \amp \lambda_n \end{pmatrix},
+D_2=\begin{pmatrix}  \mu_1 \amp 0 \amp \dots \amp 0\\  0 \amp \mu_2 \amp \dots \amp 0\\  \vdots \amp  \amp \ddots \amp \\  0 \amp \dots \amp 0 \amp \mu_n\end{pmatrix},
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-2-2-4">donc</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-2-2-5">
+\begin{align*}
+D_1D_2\amp = \begin{pmatrix}\lambda_1\amp 0\amp \dots\amp 0\\ 0\amp \lambda_2\amp \dots\amp 0\\\vdots\amp \amp \ddots\amp \\  0\amp \dots\amp 0\amp \lambda_n\end{pmatrix}\begin{pmatrix} \mu_1\amp 0\amp \dots\amp 0\\ 0\amp \mu_2\amp \amp 0\\  \vdots\amp \vdots\amp \ddots\amp \vdots\\  0\amp 0\amp \dots\amp \mu_n\end{pmatrix}\\
+\amp=\begin{pmatrix} \lambda_1\mu_1\amp 0\amp \dots\amp 0\\  0\amp \lambda_2\mu_2\amp \dots\amp 0\\  \vdots\amp \amp \ddots\amp \\  0\amp \dots\amp 0\amp \lambda_n\mu_n\end{pmatrix} \\
+\amp=\begin{pmatrix} \mu_1\lambda_1\amp 0\amp \dots\amp 0\\  0\amp \mu_2\lambda_2\amp \dots\amp 0\\  \vdots\amp \amp \ddots\amp \\  0\amp \dots\amp 0\amp \mu_n\lambda_n\end{pmatrix}=D_2D_1
+\end{align*}
+</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.1"><a href="#al1-recap_chap2_matrices-3-2-2" title="Copy heading and permalink for Exercise 1.1" aria-label="Copy heading and permalink for Exercise 1.1">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-3-2-3"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-1-1">Si <span class="process-math">\(A\in \mathcal M_n(\mathbb{R})\)</span> est une matrice carrée, et <span class="process-math">\(D\in \mathcal M_n(\mathbb{R})\)</span> une matrice diagonale, alors <span class="process-math">\(A\)</span> et <span class="process-math">\(D\)</span> commutent, autrement dit <span class="process-math">\(AD=DA\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-3-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-2-1">C’est faux !</div> <div class="para" id="al1-recap_chap2_matrices-3-2-3-2-2">Par exemple, si on prend</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-3-2-3">
+\begin{equation*}
+A=\begin{pmatrix}
+1\amp 2\\3\amp 4
+\end{pmatrix},
+D=\begin{pmatrix}
+-\pi\amp 0\\0\amp \sqrt{2}
+\end{pmatrix} \in \mathcal M_2(\mathbb R)
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-2-4">alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-3-2-5">
+\begin{equation*}
+AD=\begin{pmatrix}
+-\pi\amp 2\sqrt{2}\\
+-3\pi\amp 4\sqrt{2}
+\end{pmatrix},
+DA=\begin{pmatrix}
+-\pi\amp -2\pi\\
+3\sqrt{2}\amp 4\sqrt{2}
+\end{pmatrix}\rightarrow AD\neq DA
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-2-6">Plus généralement, on peut remarquer que, si on prend une matrice carrée et une matrice diagonale génériques</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-3-2-7">
+\begin{equation*}
+A=\begin{pmatrix}
+a_{11}\amp a_{12}\amp \dots\amp a_{1n}\\
+a_{21}\amp a_{22}\amp \amp \\
+\vdots\amp \amp \ddots\amp \\
+a_{n1}\amp a_{n2}\amp \dots\amp a_{nn}\\
+\end{pmatrix},
+D=\begin{pmatrix}
+\lambda_1\amp 0\amp \dots\amp 0\\
+0\amp \lambda_2\amp \dots\amp 0\\
+\vdots\amp \amp \ddots\amp \\
+0\amp \dots\amp 0\amp \lambda_n
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-2-8">on a en fait</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-3-2-9">
+\begin{equation*}
+AD=\begin{pmatrix}
+\lambda_1a_{11}\amp \lambda_2a_{12}\amp \dots\amp \lambda_n a_{1n}\\
+\lambda_1a_{21}\amp \lambda_2 a_{22}\amp \amp \\
+\vdots\amp \amp \ddots\amp \\
+\lambda_1 a_{n1}\amp \lambda_2 a_{n2}\amp \dots\amp \lambda_n a_{nn}\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-2-10">
+<span class="process-math">\(\leadsto\)</span> la première colonne de <span class="process-math">\(A\)</span> est multipliée par <span class="process-math">\(\lambda_1\text{,}\)</span> la deuxième par <span class="process-math">\(\lambda_2\text{,}\)</span> etc...</div> <div class="para" id="al1-recap_chap2_matrices-3-2-3-2-11">tandis que</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-3-2-12">
+\begin{equation*}
+DA=\begin{pmatrix}
+\lambda_1a_{11} \amp \lambda_1a_{12} \amp \dots \amp \lambda_1 a_{1n}\\
+\lambda_2a_{21} \amp \lambda_2 a_{22} \amp  \amp \\
+\vdots \amp  \amp \ddots \amp \\
+\lambda_n a_{n1} \amp \lambda_n a_{n2} \amp \dots \amp \lambda_n a_{nn}\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-2-13">
+<span class="process-math">\(\leadsto\)</span> la première ligne de <span class="process-math">\(A\)</span> est multipliée par <span class="process-math">\(\lambda_1\text{,}\)</span> la deuxième par <span class="process-math">\(\lambda_2\text{,}\)</span> etc...</div> <div class="para" id="al1-recap_chap2_matrices-3-2-3-2-14">Donc, pour qu’on ait <span class="process-math">\(AD=DA\)</span> quelle que soit la matrice <span class="process-math">\(A\text{,}\)</span> il faut en fait que <span class="process-math">\(\lambda_1=\lambda_2=....=\lambda_n\text{,}\)</span> autrement dit que <span class="process-math">\(D=\lambda I_n\text{.}\)</span>
+</div>
+</li>
+<li data-component="answer" id="_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-2-1">C’est faux !</div> <div class="para" id="al1-recap_chap2_matrices-3-2-3-2-2">Par exemple, si on prend</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-3-2-3">
+\begin{equation*}
+A=\begin{pmatrix}
+1\amp 2\\3\amp 4
+\end{pmatrix},
+D=\begin{pmatrix}
+-\pi\amp 0\\0\amp \sqrt{2}
+\end{pmatrix} \in \mathcal M_2(\mathbb R)
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-2-4">alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-3-2-5">
+\begin{equation*}
+AD=\begin{pmatrix}
+-\pi\amp 2\sqrt{2}\\
+-3\pi\amp 4\sqrt{2}
+\end{pmatrix},
+DA=\begin{pmatrix}
+-\pi\amp -2\pi\\
+3\sqrt{2}\amp 4\sqrt{2}
+\end{pmatrix}\rightarrow AD\neq DA
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-2-6">Plus généralement, on peut remarquer que, si on prend une matrice carrée et une matrice diagonale génériques</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-3-2-7">
+\begin{equation*}
+A=\begin{pmatrix}
+a_{11}\amp a_{12}\amp \dots\amp a_{1n}\\
+a_{21}\amp a_{22}\amp \amp \\
+\vdots\amp \amp \ddots\amp \\
+a_{n1}\amp a_{n2}\amp \dots\amp a_{nn}\\
+\end{pmatrix},
+D=\begin{pmatrix}
+\lambda_1\amp 0\amp \dots\amp 0\\
+0\amp \lambda_2\amp \dots\amp 0\\
+\vdots\amp \amp \ddots\amp \\
+0\amp \dots\amp 0\amp \lambda_n
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-2-8">on a en fait</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-3-2-9">
+\begin{equation*}
+AD=\begin{pmatrix}
+\lambda_1a_{11}\amp \lambda_2a_{12}\amp \dots\amp \lambda_n a_{1n}\\
+\lambda_1a_{21}\amp \lambda_2 a_{22}\amp \amp \\
+\vdots\amp \amp \ddots\amp \\
+\lambda_1 a_{n1}\amp \lambda_2 a_{n2}\amp \dots\amp \lambda_n a_{nn}\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-2-10">
+<span class="process-math">\(\leadsto\)</span> la première colonne de <span class="process-math">\(A\)</span> est multipliée par <span class="process-math">\(\lambda_1\text{,}\)</span> la deuxième par <span class="process-math">\(\lambda_2\text{,}\)</span> etc...</div> <div class="para" id="al1-recap_chap2_matrices-3-2-3-2-11">tandis que</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-3-2-12">
+\begin{equation*}
+DA=\begin{pmatrix}
+\lambda_1a_{11} \amp \lambda_1a_{12} \amp \dots \amp \lambda_1 a_{1n}\\
+\lambda_2a_{21} \amp \lambda_2 a_{22} \amp  \amp \\
+\vdots \amp  \amp \ddots \amp \\
+\lambda_n a_{n1} \amp \lambda_n a_{n2} \amp \dots \amp \lambda_n a_{nn}\\
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-3-2-13">
+<span class="process-math">\(\leadsto\)</span> la première ligne de <span class="process-math">\(A\)</span> est multipliée par <span class="process-math">\(\lambda_1\text{,}\)</span> la deuxième par <span class="process-math">\(\lambda_2\text{,}\)</span> etc...</div> <div class="para" id="al1-recap_chap2_matrices-3-2-3-2-14">Donc, pour qu’on ait <span class="process-math">\(AD=DA\)</span> quelle que soit la matrice <span class="process-math">\(A\text{,}\)</span> il faut en fait que <span class="process-math">\(\lambda_1=\lambda_2=....=\lambda_n\text{,}\)</span> autrement dit que <span class="process-math">\(D=\lambda I_n\text{.}\)</span>
+</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.2"><a href="#al1-recap_chap2_matrices-3-2-3" title="Copy heading and permalink for Exercise 1.2" aria-label="Copy heading and permalink for Exercise 1.2">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-3-2-4"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-3-2-4-1-1">Pour toutes matrices <span class="process-math">\(A,B\in\mathcal{M}_n(\mathbb{R})\text{,}\)</span> si <span class="process-math">\(A\neq B\)</span> alors <span class="process-math">\({}^tA \neq {}^tB\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-3-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-3-2-4-2-1">C’est vrai!</div> <div class="para" id="al1-recap_chap2_matrices-3-2-4-2-2"><dfn class="terminology">Preuve 1: par contraposée</dfn></div> <div class="para" id="al1-recap_chap2_matrices-3-2-4-2-3">Supposons que <span class="process-math">\({}^tA = {}^tB\text{,}\)</span> alors <span class="process-math">\({}^t({}^tA) \neq {}^t({}^tB)\text{,}\)</span> donc  <span class="process-math">\(A=B\text{.}\)</span>
+</div> <div class="para" id="al1-recap_chap2_matrices-3-2-4-2-4"><dfn class="terminology">Preuve 2: directement</dfn></div> <div class="para" id="al1-recap_chap2_matrices-3-2-4-2-5">Supposons que <span class="process-math">\(A\neq B\text{,}\)</span> alors <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> doivent avoir (au moins) un coefficient différent: autrement dit, il existe <span class="process-math">\((i,j)\)</span> tels que</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-4-2-6">
+\begin{equation*}
+a_{ij}\neq b_{ij}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-4-2-7">or le <span class="process-math">\((j,i)\)</span>-ième coefficient de <span class="process-math">\({}^tA\)</span> est <span class="process-math">\(a_{ij}\text{,}\)</span>  le <span class="process-math">\((j,i)\)</span>-ième coefficient de <span class="process-math">\({}^tB\)</span> est <span class="process-math">\(b_{ij}\text{,}\)</span> donc les  <span class="process-math">\((j,i)\)</span>-ièmes coefficients de  <span class="process-math">\({}^tA\)</span> et <span class="process-math">\({}^tB\)</span> sont différents, donc ces deux matrices sont différentes.</div>
+</li>
+<li data-component="answer" id="_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-3-2-4-2-1">C’est vrai!</div> <div class="para" id="al1-recap_chap2_matrices-3-2-4-2-2"><dfn class="terminology">Preuve 1: par contraposée</dfn></div> <div class="para" id="al1-recap_chap2_matrices-3-2-4-2-3">Supposons que <span class="process-math">\({}^tA = {}^tB\text{,}\)</span> alors <span class="process-math">\({}^t({}^tA) \neq {}^t({}^tB)\text{,}\)</span> donc  <span class="process-math">\(A=B\text{.}\)</span>
+</div> <div class="para" id="al1-recap_chap2_matrices-3-2-4-2-4"><dfn class="terminology">Preuve 2: directement</dfn></div> <div class="para" id="al1-recap_chap2_matrices-3-2-4-2-5">Supposons que <span class="process-math">\(A\neq B\text{,}\)</span> alors <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> doivent avoir (au moins) un coefficient différent: autrement dit, il existe <span class="process-math">\((i,j)\)</span> tels que</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-4-2-6">
+\begin{equation*}
+a_{ij}\neq b_{ij}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-4-2-7">or le <span class="process-math">\((j,i)\)</span>-ième coefficient de <span class="process-math">\({}^tA\)</span> est <span class="process-math">\(a_{ij}\text{,}\)</span>  le <span class="process-math">\((j,i)\)</span>-ième coefficient de <span class="process-math">\({}^tB\)</span> est <span class="process-math">\(b_{ij}\text{,}\)</span> donc les  <span class="process-math">\((j,i)\)</span>-ièmes coefficients de  <span class="process-math">\({}^tA\)</span> et <span class="process-math">\({}^tB\)</span> sont différents, donc ces deux matrices sont différentes.</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.3"><a href="#al1-recap_chap2_matrices-3-2-4" title="Copy heading and permalink for Exercise 1.3" aria-label="Copy heading and permalink for Exercise 1.3">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-3-2-5"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-3-2-5-1-1">Pour toutes matrices <span class="process-math">\(A,B\in\mathcal{M}_n(\mathbb{R})\text{,}\)</span> si <span class="process-math">\(A\neq B\)</span> alors <span class="process-math">\(A^{-1} \neq B^{-1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-3-2-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-3-2-5-2-1">C’est vrai!</div> <div class="para" id="al1-recap_chap2_matrices-3-2-5-2-2">On peut le montrer par contraposée</div> <div class="para" id="al1-recap_chap2_matrices-3-2-5-2-3">Supposons que <span class="process-math">\(A^{-1} = B^{-1}\text{,}\)</span> alors <span class="process-math">\((A^{-1})^{-1} = (B^{-1})^{-1}\text{,}\)</span> autrement dit <span class="process-math">\(A=B\text{.}\)</span>
+</div>
+</li>
+<li data-component="answer" id="_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-3-2-5-2-1">C’est vrai!</div> <div class="para" id="al1-recap_chap2_matrices-3-2-5-2-2">On peut le montrer par contraposée</div> <div class="para" id="al1-recap_chap2_matrices-3-2-5-2-3">Supposons que <span class="process-math">\(A^{-1} = B^{-1}\text{,}\)</span> alors <span class="process-math">\((A^{-1})^{-1} = (B^{-1})^{-1}\text{,}\)</span> autrement dit <span class="process-math">\(A=B\text{.}\)</span>
+</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.4"><a href="#al1-recap_chap2_matrices-3-2-5" title="Copy heading and permalink for Exercise 1.4" aria-label="Copy heading and permalink for Exercise 1.4">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-3-2-6"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-3-2-6-1-1">Pour toutes matrices <span class="process-math">\(A,B\in\mathcal{M}_n(\mathbb{R})\text{,}\)</span> si <span class="process-math">\(A\neq B\)</span> alors <span class="process-math">\(Tr(A) \neq Tr(B)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-3-2-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-3-2-6-2-1">Cette fois, c’est faux: deux matrices différentes peuvent avoir la même trace.</div> <div class="para" id="al1-recap_chap2_matrices-3-2-6-2-2">Par exemple, si on prend</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-6-2-3">
+\begin{equation*}
+A=\begin{pmatrix}1 \amp 0\\2 \amp 3\end{pmatrix},
+B=\begin{pmatrix}1 \amp \pi\\2 \amp 3\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-6-2-4">alors <span class="process-math">\(A\neq B\)</span> mais</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-6-2-5">
+\begin{equation*}
+Tr(A)=1+3=4=Tr(B)
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-6-2-6">
+<span class="process-math">\(\leadsto\)</span> la trace ne "voit" que la diagonale, donc si les matrices diffèrent sur un coefficient qui n’est pas sur la diagonale, elles peuvent tout de même avoir la même trace.</div>
+</li>
+<li data-component="answer" id="_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-3-2-6-2-1">Cette fois, c’est faux: deux matrices différentes peuvent avoir la même trace.</div> <div class="para" id="al1-recap_chap2_matrices-3-2-6-2-2">Par exemple, si on prend</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-6-2-3">
+\begin{equation*}
+A=\begin{pmatrix}1 \amp 0\\2 \amp 3\end{pmatrix},
+B=\begin{pmatrix}1 \amp \pi\\2 \amp 3\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-6-2-4">alors <span class="process-math">\(A\neq B\)</span> mais</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-6-2-5">
+\begin{equation*}
+Tr(A)=1+3=4=Tr(B)
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-6-2-6">
+<span class="process-math">\(\leadsto\)</span> la trace ne "voit" que la diagonale, donc si les matrices diffèrent sur un coefficient qui n’est pas sur la diagonale, elles peuvent tout de même avoir la même trace.</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.5"><a href="#al1-recap_chap2_matrices-3-2-6" title="Copy heading and permalink for Exercise 1.5" aria-label="Copy heading and permalink for Exercise 1.5">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-3-2-7"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-3-2-7-1-1">Pour toutes matrices <span class="process-math">\(A,B\in\mathcal{M}_n(\mathbb{R})\text{,}\)</span> s’il existe <span class="process-math">\(i\in\{1,...,n\}\)</span> tel que <span class="process-math">\(a_{ii}\neq b_{ii}\)</span> (autrement dit si <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> ont au moins un coefficient diagonal différent) alors <span class="process-math">\(Tr(A)\neq Tr(B)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-3-2-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-3-2-7-2-1">Ca aussi c’est faux: deux matrices peuvent avoir la même trace même si elles ont des diagonales différentes</div> <div class="para" id="al1-recap_chap2_matrices-3-2-7-2-2">Par exemple, si on prend</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-7-2-3">
+\begin{equation*}
+A=\begin{pmatrix}1 \amp 0\\2 \amp 3\end{pmatrix},
+B=\begin{pmatrix}2 \amp \pi\\2 \amp 2\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-7-2-4">alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-7-2-5">
+\begin{equation*}
+Tr(A)=1+3=4=2+2=Tr(B)
+\end{equation*}
+</div>
+</li>
+<li data-component="answer" id="_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-3-2-7-2-1">Ca aussi c’est faux: deux matrices peuvent avoir la même trace même si elles ont des diagonales différentes</div> <div class="para" id="al1-recap_chap2_matrices-3-2-7-2-2">Par exemple, si on prend</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-7-2-3">
+\begin{equation*}
+A=\begin{pmatrix}1 \amp 0\\2 \amp 3\end{pmatrix},
+B=\begin{pmatrix}2 \amp \pi\\2 \amp 2\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-7-2-4">alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-7-2-5">
+\begin{equation*}
+Tr(A)=1+3=4=2+2=Tr(B)
+\end{equation*}
+</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.6"><a href="#al1-recap_chap2_matrices-3-2-7" title="Copy heading and permalink for Exercise 1.6" aria-label="Copy heading and permalink for Exercise 1.6">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-3-2-8"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-3-2-8-1-1">Si <span class="process-math">\(A,B\in\mathcal{M}_n(\mathbb{R})\)</span> sont deux matrices inversibles telles que <span class="process-math">\(A\neq B\)</span> alors, pour toute matrice <span class="process-math">\(C\in\mathcal{M}_n(\mathbb{R})\text{,}\)</span> on a  <span class="process-math">\(CA \neq CB\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-3-2-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-3-2-8-2-1">C’est faux : par exemple si on prend</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-8-2-2">
+\begin{equation*}
+A=\begin{pmatrix} 1 \amp 1\\-1 \amp 0\end{pmatrix},
+B=\begin{pmatrix} 2 \amp 0\\-2 \amp 1\end{pmatrix},
+C=\begin{pmatrix} 0 \amp 0\\  0 \amp 0\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-8-2-3">alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-8-2-4">
+\begin{equation*}
+CA=\begin{pmatrix}  0 \amp 0\\0 \amp 0\end{pmatrix}=CB
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-8-2-5">Et de manière générale, quelles que soient <span class="process-math">\(A,B\in\mathcal{M}_n(\mathbb{R})\text{,}\)</span> égales ou non,</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-8-2-6">
+\begin{equation*}
+0_{n,n}A=0_{n,n}=0_{n,n}B
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-8-2-7">(où <span class="process-math">\(0_{n,n}\)</span> est la matrice nulle)</div>
+</li>
+<li data-component="answer" id="_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-3-2-8-2-1">C’est faux : par exemple si on prend</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-8-2-2">
+\begin{equation*}
+A=\begin{pmatrix} 1 \amp 1\\-1 \amp 0\end{pmatrix},
+B=\begin{pmatrix} 2 \amp 0\\-2 \amp 1\end{pmatrix},
+C=\begin{pmatrix} 0 \amp 0\\  0 \amp 0\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-8-2-3">alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-8-2-4">
+\begin{equation*}
+CA=\begin{pmatrix}  0 \amp 0\\0 \amp 0\end{pmatrix}=CB
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-8-2-5">Et de manière générale, quelles que soient <span class="process-math">\(A,B\in\mathcal{M}_n(\mathbb{R})\text{,}\)</span> égales ou non,</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-8-2-6">
+\begin{equation*}
+0_{n,n}A=0_{n,n}=0_{n,n}B
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-8-2-7">(où <span class="process-math">\(0_{n,n}\)</span> est la matrice nulle)</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.7"><a href="#al1-recap_chap2_matrices-3-2-8" title="Copy heading and permalink for Exercise 1.7" aria-label="Copy heading and permalink for Exercise 1.7">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-3-2-9"><h4 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-3-2-9-1-1">Si <span class="process-math">\(A,B\in\mathcal{M}_n(\mathbb{R})\)</span> sont deux matrices inversibles telles que <span class="process-math">\(A\neq B\)</span> alors, pour toute matrice <em class="emphasis">non nulle</em> <span class="process-math">\(C\in\mathcal{M}_n(\mathbb{R})\text{,}\)</span> on a  <span class="process-math">\(CA \neq CB\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-3-2-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-3-2-9-2-1">C’est faux : par exemple si on prend</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-9-2-2">
+\begin{equation*}
+A=\begin{pmatrix}1 \amp 1\\-1 \amp 0\end{pmatrix},
+B=\begin{pmatrix}2 \amp 0\\-2 \amp 1\end{pmatrix},
+C=\begin{pmatrix}0 \amp 1\\0 \amp -1\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-9-2-3">alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-9-2-4">
+\begin{equation*}
+CA=\begin{pmatrix}0\amp 1\\0\amp -1\end{pmatrix}=CB
+\end{equation*}
+</div>
+</li>
+<li data-component="answer" id="_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-3-2-9-2-1">C’est faux : par exemple si on prend</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-9-2-2">
+\begin{equation*}
+A=\begin{pmatrix}1 \amp 1\\-1 \amp 0\end{pmatrix},
+B=\begin{pmatrix}2 \amp 0\\-2 \amp 1\end{pmatrix},
+C=\begin{pmatrix}0 \amp 1\\0 \amp -1\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-9-2-3">alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-9-2-4">
+\begin{equation*}
+CA=\begin{pmatrix}0\amp 1\\0\amp -1\end{pmatrix}=CB
+\end{equation*}
+</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.8"><a href="#al1-recap_chap2_matrices-3-2-9" title="Copy heading and permalink for Exercise 1.8" aria-label="Copy heading and permalink for Exercise 1.8">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-3-2-10"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-3-2-10-1-1">Pour toutes matrices <span class="process-math">\(A,B\in\mathcal{M}_n(\mathbb{R})\text{,}\)</span> si <span class="process-math">\(A\neq B\)</span>m&gt; alors, pour toute matrice inversible <span class="process-math">\(C\in\mathcal{M}_n(\mathbb{R})\text{,}\)</span> on a  <span class="process-math">\(AC \neq BC\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-3-2-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-3-2-10-2-1">Cette fois c’est vrai: on peut le montrer par contraposée.</div> <div class="para" id="al1-recap_chap2_matrices-3-2-10-2-2">Soient <span class="process-math">\(A,B\in\mathcal{M}_n(\mathbb{R})\text{,}\)</span> supposons qu’il existe une matrice inversible <span class="process-math">\(C\in\mathcal{M}_n(\mathbb{R})\)</span> telle que <span class="process-math">\(AC=BC\text{.}\)</span>
+</div> <div class="para" id="al1-recap_chap2_matrices-3-2-10-2-3">En multipliant cette égalité par l’inverse <span class="process-math">\(C^{-1}\)</span>m&gt; de <span class="process-math">\(C\text{,}\)</span> on trouve</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-10-2-4">
+\begin{equation*}
+ACC^{-1}=BCC^{-1} \Rightarrow AI_n=BI_n \Rightarrow A=B
+\end{equation*}
+</div>
+</li>
+<li data-component="answer" id="_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-3-2-10-2-1">Cette fois c’est vrai: on peut le montrer par contraposée.</div> <div class="para" id="al1-recap_chap2_matrices-3-2-10-2-2">Soient <span class="process-math">\(A,B\in\mathcal{M}_n(\mathbb{R})\text{,}\)</span> supposons qu’il existe une matrice inversible <span class="process-math">\(C\in\mathcal{M}_n(\mathbb{R})\)</span> telle que <span class="process-math">\(AC=BC\text{.}\)</span>
+</div> <div class="para" id="al1-recap_chap2_matrices-3-2-10-2-3">En multipliant cette égalité par l’inverse <span class="process-math">\(C^{-1}\)</span>m&gt; de <span class="process-math">\(C\text{,}\)</span> on trouve</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-10-2-4">
+\begin{equation*}
+ACC^{-1}=BCC^{-1} \Rightarrow AI_n=BI_n \Rightarrow A=B
+\end{equation*}
+</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.9"><a href="#al1-recap_chap2_matrices-3-2-10" title="Copy heading and permalink for Exercise 1.9" aria-label="Copy heading and permalink for Exercise 1.9">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-3-2-11"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-3-2-11-1-1">Soit <span class="process-math">\(A\)</span> une matrice inversible. Alors, pour tout réel <span class="process-math">\(\lambda\text{,}\)</span> la matrice <span class="process-math">\(\lambda A\)</span> est inversible et son inverse est<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-3-2-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-11-1-2">
+\begin{equation*}
+(\lambda A)^{-1}=\lambda A^{-1}
+\end{equation*}
+</div>
+<li data-component="answer" id="_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="_opt_t"><div class="para" id="al1-recap_chap2_matrices-3-2-11-2-1">Faux: Si <span class="process-math">\(\lambda=0\)</span> alors <span class="process-math">\(\lambda A\)</span> est la matrice nulle. Or celle-ci n’est pas inversible (pourquoi, au fait ?).</div></li>
+<li data-component="answer" id="_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="_opt_f"><div class="para" id="al1-recap_chap2_matrices-3-2-11-2-1">Faux: Si <span class="process-math">\(\lambda=0\)</span> alors <span class="process-math">\(\lambda A\)</span> est la matrice nulle. Or celle-ci n’est pas inversible (pourquoi, au fait ?).</div></li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.10"><a href="#al1-recap_chap2_matrices-3-2-11" title="Copy heading and permalink for Exercise 1.10" aria-label="Copy heading and permalink for Exercise 1.10">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-3-2-12"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-3-2-12-1-1">Soit <span class="process-math">\(A\)</span> une matrice inversible. Alors, pour tout réel <em class="emphasis">non nul</em> <span class="process-math">\(\lambda\text{,}\)</span> la matrice <span class="process-math">\(\lambda A\)</span> est inversible et son inverse est<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-3-2-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-12-1-2">
+\begin{equation*}
+(\lambda A)^{-1}=\lambda A^{-1}
+\end{equation*}
+</div>
+<li data-component="answer" id="_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-3-2-12-2-1">Encore faux: Prenons par exemple</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-12-2-2">
+\begin{equation*}
+A =\begin{pmatrix}2 \amp 1\\1 \amp 1\end{pmatrix},
+\lambda=2 \Rightarrow \lambda A =\begin{pmatrix}4 \amp 2\\2 \amp 2\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-12-2-3">alors <span class="process-math">\(A\)</span> et <span class="process-math">\(\lambda A\)</span> sont inversibles, et par la formule de l’inverse pour les matrices 2x2 on a</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-12-2-4">
+\begin{equation*}
+A^{-1}=\begin{pmatrix}1 \amp -1\\-1 \amp 2\end{pmatrix},
+\lambda A^{-1} =\begin{pmatrix} 2 \amp -2\\-2 \amp 4\end{pmatrix},
+(\lambda A)^{-1} = \frac14\begin{pmatrix}2 \amp -2\\-2 \amp 4\end{pmatrix}
+=\frac12 \begin{pmatrix}  1 \amp -1\\-1 \amp 2\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-12-2-5">donc <span class="process-math">\(2\cdot A^{-1} \neq (2A)^{-1}\text{.}\)</span>
+</div>
+</li>
+<li data-component="answer" id="_opt_f" data-correct=""><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-3-2-12-2-1">Encore faux: Prenons par exemple</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-12-2-2">
+\begin{equation*}
+A =\begin{pmatrix}2 \amp 1\\1 \amp 1\end{pmatrix},
+\lambda=2 \Rightarrow \lambda A =\begin{pmatrix}4 \amp 2\\2 \amp 2\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-12-2-3">alors <span class="process-math">\(A\)</span> et <span class="process-math">\(\lambda A\)</span> sont inversibles, et par la formule de l’inverse pour les matrices 2x2 on a</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-12-2-4">
+\begin{equation*}
+A^{-1}=\begin{pmatrix}1 \amp -1\\-1 \amp 2\end{pmatrix},
+\lambda A^{-1} =\begin{pmatrix} 2 \amp -2\\-2 \amp 4\end{pmatrix},
+(\lambda A)^{-1} = \frac14\begin{pmatrix}2 \amp -2\\-2 \amp 4\end{pmatrix}
+=\frac12 \begin{pmatrix}  1 \amp -1\\-1 \amp 2\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-12-2-5">donc <span class="process-math">\(2\cdot A^{-1} \neq (2A)^{-1}\text{.}\)</span>
+</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.11"><a href="#al1-recap_chap2_matrices-3-2-12" title="Copy heading and permalink for Exercise 1.11" aria-label="Copy heading and permalink for Exercise 1.11">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-3-2-13"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-3-2-13-1-1">Soit <span class="process-math">\(A\)</span> une matrice inversible. Alors, pour tout réel non nul <span class="process-math">\(\lambda\text{,}\)</span> la matrice <span class="process-math">\(\lambda A\)</span> est inversible et son inverse est<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-3-2-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-13-1-2">
+\begin{equation*}
+(\lambda A)^{-1}=\frac1{\lambda} A^{-1}
+\end{equation*}
+</div>
+<li data-component="answer" id="_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-3-2-13-2-1">Cette fois c’est vrai: Soit  <span class="process-math">\(A\)</span> une matrice inversible, <span class="process-math">\(\lambda\neq 0\text{,}\)</span> alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-13-2-2">
+\begin{equation*}
+(\frac1{\lambda} A^{-1})\cdot(\lambda A)=\frac1{\lambda}\lambda A^{-1}A=1\cdot I_n =I_n
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-13-2-3">et</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-13-2-4">
+\begin{equation*}
+(\lambda A)\cdot(\frac1{\lambda} A^{-1})=\lambda\frac1{\lambda} AA^{-1}=1\cdot I_n =I_n
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-13-2-5">donc <span class="process-math">\(\lambda A\)</span> est inversible, et son inverse est bien  <span class="process-math">\(\frac1{\lambda}A^{-1}\text{.}\)</span>
+</div> <div class="para" id="al1-recap_chap2_matrices-3-2-13-2-6">
+<em class="emphasis">Remarque:</em>  Par contre,</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-13-2-7">
+\begin{equation*}
+(\lambda A)(\lambda A^{-1})=\lambda^2 AA^{-1}=\lambda^2 I_n
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-13-2-8">donc, sauf si <span class="process-math">\(\lambda = \pm1\text{,}\)</span> l’inverse de <span class="process-math">\(\lambda A\)</span> n’est pas <span class="process-math">\(\lambda A^{-1}\)</span> !</div>
+</li>
+<li data-component="answer" id="_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-3-2-13-2-1">Cette fois c’est vrai: Soit  <span class="process-math">\(A\)</span> une matrice inversible, <span class="process-math">\(\lambda\neq 0\text{,}\)</span> alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-13-2-2">
+\begin{equation*}
+(\frac1{\lambda} A^{-1})\cdot(\lambda A)=\frac1{\lambda}\lambda A^{-1}A=1\cdot I_n =I_n
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-13-2-3">et</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-13-2-4">
+\begin{equation*}
+(\lambda A)\cdot(\frac1{\lambda} A^{-1})=\lambda\frac1{\lambda} AA^{-1}=1\cdot I_n =I_n
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-13-2-5">donc <span class="process-math">\(\lambda A\)</span> est inversible, et son inverse est bien  <span class="process-math">\(\frac1{\lambda}A^{-1}\text{.}\)</span>
+</div> <div class="para" id="al1-recap_chap2_matrices-3-2-13-2-6">
+<em class="emphasis">Remarque:</em>  Par contre,</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-3-2-13-2-7">
+\begin{equation*}
+(\lambda A)(\lambda A^{-1})=\lambda^2 AA^{-1}=\lambda^2 I_n
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-3-2-13-2-8">donc, sauf si <span class="process-math">\(\lambda = \pm1\text{,}\)</span> l’inverse de <span class="process-math">\(\lambda A\)</span> n’est pas <span class="process-math">\(\lambda A^{-1}\)</span> !</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 1.12"><a href="#al1-recap_chap2_matrices-3-2-13" title="Copy heading and permalink for Exercise 1.12" aria-label="Copy heading and permalink for Exercise 1.12">🔗</a></div></article><div class="autopermalink" data-description="Exercice 1: Vrai ou faux ?"><a href="#al1-recap_chap2_matrices-3-2" title="Copy heading and permalink for Exercice 1: Vrai ou faux ?" aria-label="Copy heading and permalink for Exercice 1: Vrai ou faux ?">🔗</a></div></section><div class="autopermalink" data-description="Section 1: — Testez vos réflexes"><a href="#al1-recap_chap2_matrices-3" title="Copy heading and permalink for Section 1: — Testez vos réflexes" aria-label="Copy heading and permalink for Section 1: — Testez vos réflexes">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="al1-recap_chap2_matrices.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="al1-recap_chap2_matrices-4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

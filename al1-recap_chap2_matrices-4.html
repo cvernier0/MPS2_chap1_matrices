@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>— Entraînez-vous !</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.14';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="al1-recap_chap2_matrices.html"><span class="title">Matrices</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="al1-recap_chap2_matrices-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="al1-recap_chap2_matrices.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="al1-recap_chap2_matrices-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\K}{\mathbb{K}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\L}{\mathcal L}
+\newcommand{\B}{\mathscr B}
+\newcommand{\M}{\mathcal M}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\lbb}{\,]\,}
+\newcommand{\rbb}{\,[\,}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rg}{rg}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\Card}{Card}
+\DeclareMathOperator{\Vect}{Vect}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1 focused" data-preexpanded-levels="0" data-max-levels="1"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="al1-recap_chap2_matrices-3.html" class="internal"><span class="codenumber">1</span> <span class="title">— Testez vos réflexes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="al1-recap_chap2_matrices-3.html#al1-recap_chap2_matrices-3-2" class="internal"><span class="codenumber">1</span> <span class="title">Vrai ou faux ?</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="al1-recap_chap2_matrices-4.html" class="internal"><span class="codenumber">2</span> <span class="title">— Entraînez-vous !</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="al1-recap_chap2_matrices-4.html#al1-recap_chap2_matrices-4-5" class="internal"><span class="codenumber">2</span> <span class="title">Opérations sur les matrices</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="al1-recap_chap2_matrices-4.html#al1-recap_chap2_matrices-4-6" class="internal"><span class="codenumber">2</span> <span class="title">Inverses de matrices</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="al1-recap_chap2_matrices-4.html#al1-recap_chap2_matrices-4-7" class="internal"><span class="codenumber">2</span> <span class="title">Echelonnage de matrices</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="al1-recap_chap2_matrices-5.html" class="internal"><span class="codenumber">3</span> <span class="title">— Erreurs à ne pas faire</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="al1-recap_chap2_matrices-4"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">— Entraînez-vous !</span>
+</h2>
+<div class="para" id="al1-recap_chap2_matrices-4-2"><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHVuemFsNWtxYmJqcmMzbHFmZHZuZm96cnFvNWg4dmo5MDhleGY2NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qLHpYDyJoGfde/giphy.gif" class="contained"></div>
+<div class="para" id="al1-recap_chap2_matrices-4-4"><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<section class="exercises" id="al1-recap_chap2_matrices-4-5"><h3 class="heading hide-type">
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Opérations sur les matrices</span>
+</h3>
+<article class="exercise exercise-like" id="al1-recap_chap2_matrices-4-5-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="">
+<div class="para" id="al1-recap_chap2_matrices-4-5-2-1-1">Supposons qu’on ait 5 matrices <span class="process-math">\(A,B,C,D,E\)</span> de tailles respectives données ci-dessous:<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="al1-recap_chap2_matrices-4-5-2-1-2">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l1 t1 lines">A</td>
+<td class="c m b1 r1 l0 t1 lines">B</td>
+<td class="c m b1 r1 l0 t1 lines">C</td>
+<td class="c m b1 r1 l0 t1 lines">D</td>
+<td class="c m b1 r1 l0 t1 lines">E</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines"><span class="process-math">\(3\times 1\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(3\times 6\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(6\times 2\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(2\times 6\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(1\times 3\)</span></td>
+</tr>
+</table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-5-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="al1-recap_chap2_matrices-4-5-2-1-3">Si les opérations ci-dessous sont réalisables, indiquer la taille de la matrice obtenue, par exemple <span class="process-math">\(\boxed{2\times 5}\text{,}\)</span> sinon indiquer <span class="process-math">\(\boxed{\text{impossible}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-5-2-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(EA\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(AE\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(A{}^tB\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\({}^tB(A+{}^tE)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2A+C\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(({}^tC+D){}^tB\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(CD+{}^tB{}^tE\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((B{}^tD){}^tC + B\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+</table></div>
+<script type="application/json">[[{"regex": "^\\s*1x1\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-1-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<span class=\"process-math\">\\({\\color{orange}{1}}\\times {\\color{blue}{3}} \\cdot {\\color{blue}{3}}\\times {\\color{orange}{1}}\\leadsto {\\color{orange}{1}}\\times{\\color{orange}{1}}.\\)<\/span>"}], [{"regex": "^\\s*3x3\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-2-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<span class=\"process-math\">\\({\\color{blue}{3}}\\times {\\color{orange}{1}} \\cdot{\\color{orange}{1}}\\times {\\color{blue}{3}} \\leadsto {\\color{blue}{3}}\\times {\\color{blue}{3}}\\)<\/span>"}], [{"regex": "^\\s*impossible\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-3-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-3-2-1-1\"><span class=\"process-math\">\\(B\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{blue}{3}}\\times {\\color{purple}{6}}\\)<\/span> donc <span class=\"process-math\">\\({}^tB\\)<\/span>  est de taille <span class=\"process-math\">\\({\\color{purple}{6}}\\times {\\color{blue}{3}}\\text{.}\\)<\/span> Et<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-2-2-3-2-1-2\">\n\\begin{equation*}\n({\\color{blue}{3}}\\times {\\color{orange}{1}}) \\cdot({\\color{purple}{6}}\\times {\\color{blue}{3}}) \\leadsto \\text{ pas définie !}\n\\end{equation*}\n<\/div>"}], [{"regex": "^\\s*6x1\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-4-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-4-2-1-1\"><span class=\"process-math\">\\(E\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{orange}{1}}\\times {\\color{blue}{3}}\\)<\/span> donc <span class=\"process-math\">\\({}^tE\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{blue}{3}}\\times {\\color{orange}{1}}\\text{.}\\)<\/span><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-4-2-1-2\"><span class=\"process-math\">\\(A\\)<\/span> aussi, donc <span class=\"process-math\">\\(A+{}^tE\\)<\/span> est définie, et <span class=\"process-math\">\\(A+{}^tE\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{blue}{3}}\\times {\\color{orange}{1}}\\text{.}\\)<\/span><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-4-2-1-3\">Enfin, <span class=\"process-math\">\\(B\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{blue}{3}}\\times {\\color{purple}{6}}\\)<\/span> donc <span class=\"process-math\">\\({}^tB\\)<\/span>  est de taille <span class=\"process-math\">\\({\\color{purple}{6}}\\times {\\color{blue}{3}}\\text{.}\\)<\/span><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-4-2-1-4\">Enfin, pour le produit de <span class=\"process-math\">\\({}^tB\\)<\/span> par <span class=\"process-math\">\\(A+{}^tE\\text{,}\\)<\/span><\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-2-2-4-2-1-5\">\n\\begin{equation*}\n({\\color{purple}{6}}\\times {\\color{blue}{3}})\\cdot ({\\color{blue}{3}}\\times {\\color{orange}{1}}) \\leadsto {\\color{purple}{6}}\\times {\\color{orange}{1}} \n\\end{equation*}\n<\/div>"}], [{"regex": "^\\s*impossible\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-5-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-5-2-1-1\"><span class=\"process-math\">\\(A\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{blue}{3}}\\times {\\color{orange}{1}}\\text{,}\\)<\/span> donc <span class=\"process-math\">\\(2A\\)<\/span> aussi.<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-5-2-1-2\"><span class=\"process-math\">\\(C\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{purple}{6}} \\times {\\color{teal}{2}}\\text{,}\\)<\/span> donc pas de la même taille que <span class=\"process-math\">\\(2A\\text{.}\\)<\/span><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-5-2-1-3\">Donc la somme <span class=\"process-math\">\\(2A+C\\)<\/span> n’est pas définie.<\/div>"}], [{"regex": "^\\s*2x3\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-6-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-6-2-1-1\"><span class=\"process-math\">\\(C\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{purple}{6}} \\times {\\color{teal}{2}}\\text{,}\\)<\/span> donc <span class=\"process-math\">\\({}^tC\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{teal}{2}} \\times {\\color{purple}{6}}\\text{,}\\)<\/span> tout comme <span class=\"process-math\">\\(D\\text{.}\\)<\/span><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-6-2-1-2\">Donc la somme <span class=\"process-math\">\\({}^tC + D\\)<\/span> est définie, et <span class=\"process-math\">\\({}^tC+D\\)<\/span> est de taille  <span class=\"process-math\">\\({\\color{teal}{2}} \\times {\\color{purple}{6}}\\text{.}\\)<\/span><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-6-2-1-3\"><span class=\"process-math\">\\(B\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{blue}{3}}\\times {\\color{purple}{6}}\\)<\/span> donc <span class=\"process-math\">\\({}^tB\\)<\/span>  est de taille <span class=\"process-math\">\\({\\color{purple}{6}}\\times {\\color{blue}{3}}\\text{.}\\)<\/span><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-6-2-1-4\">Et pour le produit de <span class=\"process-math\">\\({}^tC + D\\)<\/span> par <span class=\"process-math\">\\({}^tB\\text{,}\\)<\/span><\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-2-2-6-2-1-5\">\n\\begin{equation*}\n({\\color{teal}{2}} \\times {\\color{purple}{6}})\\cdot ({\\color{purple}{6}}\\times {\\color{blue}{3}}) \\leadsto {\\color{teal}{2}} \\times {\\color{blue}{3}}\n\\end{equation*}\n<\/div>"}], [{"regex": "^\\s*impossible\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-7-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-7-2-1-1\">Pour le produit <span class=\"process-math\">\\(CD\\text{,}\\)<\/span> on a<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-2-2-7-2-1-2\">\n\\begin{equation*}\n({\\color{purple}{6}} \\times {\\color{teal}{2}})\\cdot({\\color{teal}{2}} \\times {\\color{purple}{6}}) \\leadsto  {\\color{purple}{6}} \\times {\\color{purple}{6}}\n\\end{equation*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-7-2-1-3\"><span class=\"process-math\">\\(B\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{blue}{3}}\\times {\\color{purple}{6}}\\)<\/span> donc <span class=\"process-math\">\\({}^tB\\)<\/span>  est de taille <span class=\"process-math\">\\({\\color{purple}{6}}\\times {\\color{blue}{3}}\\text{.}\\)<\/span><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-7-2-1-4\"><span class=\"process-math\">\\(E\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{orange}{1}}\\times {\\color{blue}{3}}\\)<\/span> donc <span class=\"process-math\">\\({}^tE\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{blue}{3}}\\times {\\color{orange}{1}}\\text{.}\\)<\/span><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-7-2-1-5\">Donc le produit <span class=\"process-math\">\\({}^tB{}^tE\\)<\/span> donne<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-2-2-7-2-1-6\">\n\\begin{equation*}\n({\\color{purple}{6}}\\times {\\color{blue}{3}})\\cdot ({\\color{blue}{3}}\\times {\\color{orange}{1}}) \\leadsto {\\color{purple}{6}}\\times {\\color{orange}{1}}\n\\end{equation*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-7-2-1-7\">Donc <span class=\"process-math\">\\(CD\\)<\/span> et <span class=\"process-math\">\\({}^tB{}^tE\\)<\/span> sont définis, mais pas de même taille, et donc leur somme n’est pas définie.<\/div>"}], [{"regex": "^\\s*3x6\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-8-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-8-2-1-1\"><span class=\"process-math\">\\(D\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{teal}{2}} \\times {\\color{purple}{6}}\\)<\/span> donc <span class=\"process-math\">\\({}^tD\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{purple}{6}} \\times {\\color{teal}{2}}\\text{.}\\)<\/span><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-8-2-1-2\">Donc le produit <span class=\"process-math\">\\(B{}^tD\\)<\/span> donne<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-2-2-8-2-1-3\">\n\\begin{equation*}\n({\\color{blue}{3}}\\times {\\color{purple}{6}})\\cdot ({\\color{purple}{6}} \\times {\\color{teal}{2}}) \\leadsto {\\color{blue}{3}} \\times {\\color{teal}{2}}\n\\end{equation*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-8-2-1-4\"><span class=\"process-math\">\\(C\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{purple}{6}} \\times {\\color{teal}{2}}\\text{,}\\)<\/span> donc <span class=\"process-math\">\\({}^tC\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{teal}{2}} \\times {\\color{purple}{6}}\\text{.}\\)<\/span><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-8-2-1-5\">Donc le produit <span class=\"process-math\">\\((B{}^tD){}^tC\\)<\/span> donne<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-2-2-8-2-1-6\">\n\\begin{equation*}\n({\\color{blue}{3}} \\times {\\color{teal}{2}}) \\times ({\\color{teal}{2}} \\times {\\color{purple}{6}}) \\leadsto {\\color{blue}{3}}\\times {\\color{purple}{6}}\n\\end{equation*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-2-2-8-2-1-7\"><span class=\"process-math\">\\((B{}^tD){}^tC\\)<\/span> est de même taille que <span class=\"process-math\">\\(B\\text{,}\\)<\/span> donc on peut les sommer, et <span class=\"process-math\">\\((B{}^tD){}^tC+B\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{blue}{3}}\\times {\\color{purple}{6}}\\text{.}\\)<\/span><\/div>"}]]</script>
+</div></div></div>
+<div class="autopermalink" data-description="Exercise 2.1"><a href="#al1-recap_chap2_matrices-4-5-2" title="Copy heading and permalink for Exercise 2.1" aria-label="Copy heading and permalink for Exercise 2.1">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-4-5-3"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="">
+<div class="para" id="al1-recap_chap2_matrices-4-5-3-1-1">Prenons maintenant les 5 matrices:<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-4-5-3-1-2">
+\begin{align*}
+A=\begin{pmatrix}  3 \amp 0\\-1 \amp 2\\1 \amp 1\end{pmatrix},\ 
+B=\begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix},\ 
+C=\begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix}\\
+D=\begin{pmatrix}  1 \amp 0 \amp 1\\-1 \amp 0 \amp 1\\3 \amp 2 \amp 1\end{pmatrix},\ 
+E=\begin{pmatrix}  6 \amp 1 \amp 3\\-1 \amp 1 \amp 2\\4 \amp 1 \amp 3\end{pmatrix}
+\end{align*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-4-5-3-1-3">Pour chacune des opérations ci-dessous, donner la première colonne de la matrice obtenue (par exemple, pour <span class="process-math">\(\dfrac12 A\text{,}\)</span> taper <span class="process-math">\(\boxed{3/2\ -1/2\quad 1/2}\)</span>). Si l’opératon n’est pas définie, taper <span class="process-math">\(\boxed{\text{impossible}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-5-3-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="al1-recap_chap2_matrices-4-5-3-1-4">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(-3(D+2E)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(2{}^tA+C\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((B-{}^tB)^2\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\({}^t(2{}^tE-3{}^tD)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(CBA\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(ABC-AC\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(B^2+CA\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10\left(-D+2E\right)^{-1}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10\left(-D^{-1}+2E^{-1}\right)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((CA)^{-1}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((AC)^{-1}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(A^{-1}C^{-1}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><input type="text" placeholder="Text"></td>
+</tr>
+</table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-5-3-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<script type="application/json">[[{"regex": "^\\s*-39 9 -33\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-1-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-1-2-1-1\">Le calcul donne<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-1-2-1-2\">\n\\begin{align*}\nD+2E \\amp = \\begin{pmatrix}  1 \\amp 0 \\amp 1\\\\-1 \\amp 0 \\amp 1\\\\3 \\amp 2 \\amp 1\\end{pmatrix} + 2 \\begin{pmatrix}  6 \\amp 1 \\amp 3\\\\-1 \\amp 1 \\amp 2\\\\4 \\amp 1 \\amp 3\\end{pmatrix}\\\\\n\\amp = \\begin{pmatrix}  1 \\amp 0 \\amp 1\\\\-1 \\amp 0 \\amp 1\\\\3 \\amp 2 \\amp 1\\end{pmatrix} +  \\begin{pmatrix}  12 \\amp 2 \\amp 6\\\\-2 \\amp 2 \\amp 4\\\\8 \\amp 2 \\amp 6\\end{pmatrix}\\\\\n\\amp = \\begin{pmatrix}  13 \\amp 2 \\amp 7\\\\-3 \\amp 2 \\amp 5\\\\11 \\amp 4 \\amp 7\\end{pmatrix}\n\\end{align*}\n<\/div><div class=\"para logical\" id=\"al1-recap_chap2_matrices-4-5-3-2-1-2-1-3\"><div class=\"para\">donc<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-1-2-1-3-1\">\n\\begin{equation*}\n-3(D+2E) = \\begin{pmatrix}  -39 \\amp -6 \\amp -21\\\\9 \\amp -6 \\amp -15\\\\-33 \\amp -12 \\amp -21\\end{pmatrix}\\text{.}\n\\end{equation*}\n<\/div><\/div>"}], [{"regex": "^\\s*7 1\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-2-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-2-2-1-1\">Le calcul donne<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-2-2-1-2\">\n\\begin{align*}\n2{}^tA+C\\amp = 2{}^t\\begin{pmatrix}  3 \\amp 0\\\\-1 \\amp 2\\\\1 \\amp 1\\end{pmatrix} +\\begin{pmatrix}  1 \\amp 4 \\amp 2\\\\1 \\amp 1 \\amp 5\\end{pmatrix} \\\\\n\\amp = 2\\begin{pmatrix}  3 \\amp -1 \\amp 1\\\\0 \\amp 2\\amp 1 \\end{pmatrix} +\\begin{pmatrix}  1 \\amp 4 \\amp 2\\\\1 \\amp 1 \\amp 5\\end{pmatrix} \\\\\n\\amp = \\begin{pmatrix}  6 \\amp -2 \\amp 2\\\\0 \\amp 4\\amp 2 \\end{pmatrix} +\\begin{pmatrix}  1 \\amp 4 \\amp 2\\\\1 \\amp 1 \\amp 5\\end{pmatrix} \\\\\n\\amp = \\begin{pmatrix}  7 \\amp 2 \\amp 4\\\\1 \\amp 5\\amp 7 \\end{pmatrix} \n\\end{align*}\n<\/div>"}], [{"regex": "^\\s*-1 0\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-3-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-3-2-1-1\">Le calcul donne<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-3-2-1-2\">\n\\begin{align*}\nB-{}^tB \\amp= \\begin{pmatrix}  4 \\amp -1\\\\0 \\amp 2\\end{pmatrix} - {}^t\\begin{pmatrix}  4 \\amp -1\\\\0 \\amp 2\\end{pmatrix}\\\\\n\\amp = \\begin{pmatrix}  4 \\amp -1\\\\0 \\amp 2\\end{pmatrix} - \\begin{pmatrix}  4 \\amp 0\\\\1 \\amp 2\\end{pmatrix}\\\\\n\\amp = \\begin{pmatrix}  0 \\amp -1\\\\1 \\amp 0\\end{pmatrix} \n\\end{align*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-3-2-1-3\">donc<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-3-2-1-4\">\n\\begin{equation*}\n(B-{}^tB)^2 = \\begin{pmatrix}  0 \\amp -1\\\\1 \\amp 0\\end{pmatrix}\\begin{pmatrix} 0 \\amp -1\\\\1 \\amp 0\\end{pmatrix}=\\begin{pmatrix}  -1 \\amp 0\\\\0 \\amp -1\\end{pmatrix}\n\\end{equation*}\n<\/div>"}], [{"regex": "^\\s*9 1 -1\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-4-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-4-2-1-1\">Le calcul donne<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-4-2-1-2\">\n\\begin{align*}\n2{}^tE-3{}^tD \\amp = 2{}^t\\begin{pmatrix}  6 \\amp 1 \\amp 3\\\\-1 \\amp 1 \\amp 2\\\\4 \\amp 1 \\amp 3\\end{pmatrix} - 3 {}^t\\begin{pmatrix}  1 \\amp 0 \\amp 1\\\\-1 \\amp 0 \\amp 1\\\\3 \\amp 2 \\amp 1\\end{pmatrix}\\\\\n\\amp = 2\\begin{pmatrix}  6 \\amp -1 \\amp 4\\\\1 \\amp 1 \\amp 1\\\\3 \\amp 2 \\amp 3\\end{pmatrix} - 3 \\begin{pmatrix}  1 \\amp -1 \\amp 3\\\\0 \\amp 0 \\amp 2\\\\1 \\amp 1 \\amp 1\\end{pmatrix}\\\\\n\\amp = \\begin{pmatrix}  12 \\amp -2 \\amp 8\\\\2 \\amp 2 \\amp 2\\\\6 \\amp 4 \\amp 6\\end{pmatrix} -  \\begin{pmatrix} 3  \\amp -3 \\amp 9\\\\0 \\amp 0 \\amp 6\\\\3 \\amp 3 \\amp 3\\end{pmatrix}\\\\\n\\amp = \\begin{pmatrix}  9 \\amp 1 \\amp -1\\\\2 \\amp 2 \\amp -4\\\\3 \\amp 1 \\amp 3\\end{pmatrix} \n\\end{align*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-4-2-1-3\">donc <span class=\"process-math\">\\({}^t(2{}^tE-3{}^tD)=\\begin{pmatrix}  9 \\amp 2 \\amp 3\\\\1 \\amp 2 \\amp 1\\\\-1 \\amp -4 \\amp 3\\end{pmatrix}\\text{.}\\)<\/span><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-4-2-1-4\"><em class=\"emphasis\">Remarque:<\/em> On peut utiliser les propriétés de la transposée pour simplifier le calcul:<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-4-2-1-5\">\n\\begin{equation*}\n{}^t(2{}^tE-3{}^tD)= 2{}^t({}^tE) - 3 {}^t({}^t D) = 2E-3D\n\\end{equation*}\n<\/div>"}], [{"regex": "^\\s*impossible\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-5-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-5-2-1-1\"><span class=\"process-math\">\\(C\\)<\/span> est de taille <span class=\"process-math\">\\(2\\times {\\color{red}3}\\)<\/span> et <span class=\"process-math\">\\(B\\)<\/span> est de taille <span class=\"process-math\">\\({\\color{red} 2}\\times 2\\text{,}\\)<\/span> donc le produit <span class=\"process-math\">\\(CB\\)<\/span> n’existe pas. Et donc, <span class=\"process-math\">\\(CBA\\)<\/span> non plus !<\/div>"}], [{"regex": "^\\s*6 0 3\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-6-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-6-2-1-1\">On calcule<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-6-2-1-2\">\n\\begin{align*}\nABC \\amp =\\begin{pmatrix}  3 \\amp 0\\\\-1 \\amp 2\\\\1 \\amp 1\\end{pmatrix}\\begin{pmatrix}  4 \\amp -1\\\\0 \\amp 2\\end{pmatrix}\\begin{pmatrix}  1 \\amp 4 \\amp 2\\\\1 \\amp 1 \\amp 5\\end{pmatrix}\\\\\n\\amp =\\begin{pmatrix} 12\\amp  -3 \\\\-4 \\amp 5\\\\4 \\amp 1\\end{pmatrix}\\begin{pmatrix}  1 \\amp 4 \\amp 2\\\\1 \\amp 1 \\amp 5\\end{pmatrix}\\\\\n\\amp =\\begin{pmatrix} 9\\amp 45 \\amp 9 \\\\1 \\amp -11 \\amp 17 \\\\5 \\amp 17 \\amp 13\\end{pmatrix}\n\\end{align*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-6-2-1-3\">et d’un autre côté<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-6-2-1-4\">\n\\begin{align*}\nAC \\amp = \\begin{pmatrix}  3 \\amp 0\\\\-1 \\amp 2\\\\1 \\amp 1\\end{pmatrix} \\begin{pmatrix}  1 \\amp 4 \\amp 2\\\\1 \\amp 1 \\amp 5\\end{pmatrix}\\\\\n\\amp =\\begin{pmatrix}  3 \\amp 12 \\amp 6\\\\1 \\amp -2 \\amp 8\\\\2 \\amp 5 \\amp 7 \\end{pmatrix} \n\\end{align*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-6-2-1-5\">donc<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-6-2-1-6\">\n\\begin{equation*}\nABC-AC = \\begin{pmatrix}  6 \\amp 33 \\amp 3\\\\0 \\amp -9 \\amp 9\\\\3 \\amp 12 \\amp 6 \\end{pmatrix}\n\\end{equation*}\n<\/div>"}], [{"regex": "^\\s*17 7\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-7-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-7-2-1-1\">On calcule<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-7-2-1-2\">\n\\begin{align*}\nB^2+CA\\amp = \\begin{pmatrix}  4 \\amp -1\\\\0 \\amp 2\\end{pmatrix}\\begin{pmatrix}  4 \\amp -1\\\\0 \\amp 2\\end{pmatrix} + \\begin{pmatrix}  1 \\amp 4 \\amp 2\\\\1 \\amp 1 \\amp 5\\end{pmatrix}\\begin{pmatrix}  3 \\amp 0\\\\-1 \\amp 2\\\\1 \\amp 1\\end{pmatrix}\\\\\n\\amp = \\begin{pmatrix}  16 \\amp -6\\\\0 \\amp 4\\end{pmatrix} + \\begin{pmatrix}  1 \\amp 10 \\\\7 \\amp 7 \\end{pmatrix}\\\\\n\\amp = \\begin{pmatrix}  17 \\amp 4\\\\7 \\amp 11\\end{pmatrix} \n\\end{align*}\n<\/div>"}], [{"regex": "^\\s*1 2 -1\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-8-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-8-2-1-1\">On calcule<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-8-2-1-2\">\n\\begin{equation*}\n-D+2E=-\\begin{pmatrix}  1 \\amp 0 \\amp 1\\\\-1 \\amp 0 \\amp 1\\\\3 \\amp 2 \\amp 1\\end{pmatrix}+2\\begin{pmatrix}  6 \\amp 1 \\amp 3\\\\-1 \\amp 1 \\amp 2\\\\4 \\amp 1 \\amp 3\\end{pmatrix}=\\begin{pmatrix}  11 \\amp 2 \\amp 5\\\\-1 \\amp 2 \\amp 3\\\\5 \\amp 0 \\amp 5\\end{pmatrix}\n\\end{equation*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-8-2-1-3\">De là, avec la méthode d’inversion de Gauss:<\/div><div class=\"image-box\" style=\"width: 100%; margin-left: 0%; margin-right: 0%;\"><img src=\"external\/https:\/\/i.ibb.co\/23nchzc\/inv-D-2-E-1.png\" class=\"contained\"\/><\/div><div class=\"image-box\" style=\"width: 100%; margin-left: 0%; margin-right: 0%;\"><img src=\"external\/https:\/\/i.ibb.co\/dm5YKd0\/inv-D-2-E-2.png\" class=\"contained\"\/><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-8-2-1-6\">et donc <span class=\"process-math\">\\(10(-D+2E)^{-1}=10\\begin{pmatrix}  \\frac1{10} \\amp -\\frac1{10} \\amp -\\frac1{25}\\\\\\frac1{5} \\amp \\frac3{10} \\amp -\\frac{19}{50}\\\\-\\frac1{10} \\amp \\frac1{10} \\amp \\frac6{25}\\end{pmatrix} =\\begin{pmatrix}  1 \\amp -1 \\amp -\\frac25\\\\2 \\amp 3 \\amp -\\frac{19}{5}\\\\-1 \\amp 1 \\amp \\frac{12}{5}\\end{pmatrix} \\text{.}\\)<\/span><\/div>"}], [{"regex": "^\\s*5 120 -55\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-9-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-9-2-1-1\">On calcule, à l’aide de la méthode d’inversion de Gauss (cliquer pour agrandir),<\/div><div class=\"image-box\" style=\"width: 100%; margin-left: 0%; margin-right: 0%;\"><img src=\"external\/https:\/\/i.ibb.co\/gPbnm9Q\/inv-D.png\" class=\"contained\"\/><\/div><div class=\"image-box\" style=\"width: 100%; margin-left: 0%; margin-right: 0%;\"><img src=\"external\/https:\/\/i.ibb.co\/qBCH1Jh\/inv-E.png\" class=\"contained\"\/><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-9-2-1-4\">donc<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-9-2-1-5\">\n\\begin{equation*}\n-D^{-1}+2E^{-1} = \n-\\frac12\\begin{pmatrix}1 \\amp -1 \\amp 0\\\\-2 \\amp 1 \\amp 1\\\\1 \\amp 1 \\amp 0\\end{pmatrix}\n+\\begin{pmatrix}1 \\amp 0 \\amp -1\\\\11 \\amp 6 \\amp -15\\\\-5 \\amp -2 \\amp 7\\end{pmatrix}=\n\\frac12\\begin{pmatrix}1 \\amp 1 \\amp -2\\\\24 \\amp 11 \\amp -31\\\\-11 \\amp -5 \\amp 14\\end{pmatrix}\n\\end{equation*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-9-2-1-6\">et donc en fin de compte<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-9-2-1-7\">\n\\begin{equation*}\n10(-D^{-1}+2E^{-1}) = \\begin{pmatrix}5 \\amp 5 \\amp -10\\\\120 \\amp 55 \\amp -155\\\\-55 \\amp -25 \\amp 70\\end{pmatrix}\n\\end{equation*}\n<\/div>"}], [{"regex": "^\\s*-1\/9 1\/9\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-10-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-10-2-1-1\">On calcule (en fait, on a déjà calculé)<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-10-2-1-2\">\n\\begin{equation*}\nCA = \\begin{pmatrix}  1 \\amp 4 \\amp 2\\\\1 \\amp 1 \\amp 5\\end{pmatrix}\\begin{pmatrix}  3 \\amp 0\\\\-1 \\amp 2\\\\1 \\amp 1\\end{pmatrix} =  \\begin{pmatrix}  1 \\amp 10 \\\\7 \\amp 7 \\end{pmatrix}\n\\end{equation*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-10-2-1-3\">Du coup, <span class=\"process-math\">\\(\\det(CA) = 1\\cdot 7 - 7 \\cdot 10 = -63 \\neq 0\\text{,}\\)<\/span> donc <span class=\"process-math\">\\(CA\\)<\/span> est inversible et<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-10-2-1-4\">\n\\begin{equation*}\n(CA)^{-1} = \\dfrac1{-63}\\begin{pmatrix}7\\amp -10\\\\ -7 \\amp 1\\end{pmatrix} =  \\begin{pmatrix}-\\dfrac1{9}\\amp \\dfrac{10}{63}\\\\ \\dfrac1{9} \\amp -\\dfrac1{63}\\end{pmatrix}\n\\end{equation*}\n<\/div>"}], [{"regex": "^\\s*impossible\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-11-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-11-2-1-1\">On calcule<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-5-3-2-11-2-1-2\">\n\\begin{align*}\nAC\\amp =\\begin{pmatrix}  3 \\amp 0\\\\-1 \\amp 2\\\\1 \\amp 1\\end{pmatrix} \\begin{pmatrix}  1 \\amp 4 \\amp 2\\\\1 \\amp 1 \\amp 5\\end{pmatrix}\\\\\n\\amp \\begin{pmatrix}  3 \\amp 12 \\amp 6\\\\1 \\amp -2 \\amp 8 \\\\2 \\amp 5 \\amp 7\\end{pmatrix} \n\\end{align*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-11-2-1-3\">Mais, si on essaie d’inverser <span class=\"process-math\">\\(AC\\text{,}\\)<\/span> on tombe sur un os:<\/div><div class=\"image-box\" style=\"width: 100%; margin-left: 0%; margin-right: 0%;\"><img src=\"external\/https:\/\/i.ibb.co\/WxpWWX3\/inv-CA.png\" class=\"contained\"\/><\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-11-2-1-5\"><span class=\"process-math\">\\(\\leadsto\\ AC\\)<\/span> n’est pas inversible, donc l’opération est impossible.<\/div>"}], [{"regex": "^\\s*impossible\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-12-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-5-3-2-12-2-1-1\"><span class=\"process-math\">\\(A\\)<\/span> et <span class=\"process-math\">\\(C\\)<\/span> ne sont pas des matrices carrées, donc elles ne sont pas inversibles.<\/div>"}]]</script>
+</div></div></div>
+<div class="autopermalink" data-description="Exercise 2.2"><a href="#al1-recap_chap2_matrices-4-5-3" title="Copy heading and permalink for Exercise 2.2" aria-label="Copy heading and permalink for Exercise 2.2">🔗</a></div></article><div class="autopermalink" data-description="Exercice 2: Opérations sur les matrices"><a href="#al1-recap_chap2_matrices-4-5" title="Copy heading and permalink for Exercice 2: Opérations sur les matrices" aria-label="Copy heading and permalink for Exercice 2: Opérations sur les matrices">🔗</a></div></section><section class="exercises" id="al1-recap_chap2_matrices-4-6"><h3 class="heading hide-type">
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inverses de matrices</span>
+</h3>
+<article class="exercise exercise-like" id="al1-recap_chap2_matrices-4-6-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement">
+<div class="para" id="al1-recap_chap2_matrices-4-6-2-1-1">Dans cet exercice, <span class="process-math">\(A,B,C\)</span> et <span class="process-math">\(D\)</span> sont toutes des matrices carrées de même taille <span class="process-math">\(n\times n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-6-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="al1-recap_chap2_matrices-4-6-2-1-2">Sélectionner toutes les affirmations correctes:<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-6-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<ul data-component="multiplechoice" class="exercise-interactives" data-multipleanswers="true">
+<li data-component="answer" id="_opt_a"><div class="para" id="al1-recap_chap2_matrices-4-6-2-2-1-1-1">Si <span class="process-math">\(B\)</span> est inversible, l’inverse de <span class="process-math">\(2B\)</span> est <span class="process-math">\(2B^{-1}\)</span>
+</div></li>
+<li data-component="feedback" id="_opt_a">
+<div class="para" id="al1-recap_chap2_matrices-4-6-2-2-1-2-1">Non, car</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-4-6-2-2-1-2-2">
+\begin{equation*}
+(2B)(2B^{-1})= 4 B B^{-1} = 4 I_n \neq I_n
+\end{equation*}
+</div>
+</li>
+<li data-component="answer" id="_opt_b" data-correct=""><div class="para" id="al1-recap_chap2_matrices-4-6-2-2-2-1-1">Si <span class="process-math">\(B\)</span> est inversible, l’inverse de <span class="process-math">\(2B\)</span> est <span class="process-math">\(\frac12B^{-1}\)</span>
+</div></li>
+<li data-component="feedback" id="_opt_b">
+<div class="para" id="al1-recap_chap2_matrices-4-6-2-2-2-2-1">C’est ça ! Pour le vérifier, on calcule</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-4-6-2-2-2-2-2">
+\begin{equation*}
+(2B)(\frac12B^{-1})= 2\cdot\frac12 \cdot B B^{-1} =  I_n 
+\end{equation*}
+</div>
+</li>
+<li data-component="answer" id="_opt_c" data-correct=""><div class="para" id="al1-recap_chap2_matrices-4-6-2-2-3-1-1">Si <span class="process-math">\(2A\)</span> est l’inverse de <span class="process-math">\(BC\text{,}\)</span> alors <span class="process-math">\(C=\frac12 B^{-1}A^{-1}\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="_opt_c">
+<div class="para" id="al1-recap_chap2_matrices-4-6-2-2-3-2-1">Exactement ! On a alors</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-4-6-2-2-3-2-2">
+\begin{align*}
+2A = (BC)^{-1}=C^{-1}B^{-1}\amp\iff 2AB = C^{-1}\\
+\amp \iff C = (2AB)^{-1} = \frac12 B^{-1}A^{-1}
+\end{align*}
+</div>
+</li>
+<li data-component="answer" id="_opt_d"><div class="para" id="al1-recap_chap2_matrices-4-6-2-2-4-1-1">L’inverse de <span class="process-math">\(ABC\)</span> est <span class="process-math">\(C^{-1}A^{-1}B^{-1}\)</span>
+</div></li>
+<li data-component="feedback" id="_opt_d">
+<div class="para" id="al1-recap_chap2_matrices-4-6-2-2-4-2-1">Non, car <span class="process-math">\((ABC)(C^{-1}A^{-1}B^{-1})\)</span> ne donne généralement pas <span class="process-math">\(I_n\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-4-6-2-2-4-2-2">
+\begin{align*}
+(ABC)(C^{-1}A^{-1}B^{-1})\amp= AB(CC^{-1})A^{-1}B^{-1}\\
+\amp =  AB I_n A^{-1}B^{-1}\\
+\amp = ABA^{-1}B^{-1}
+\end{align*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-4-6-2-2-4-2-3">
+<span class="process-math">\(\leadsto\)</span> On ne peut plus simplifier ! Par contre,</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-4-6-2-2-4-2-4">
+\begin{align*}
+(ABC)(C^{-1}B^{-1}A^{-1}) \amp = AB(CC^{-1})B^{-1}A^{-1} \\
+\amp  = AB I_n B^{-1}A^{-1}\\
+\amp =A (BB^{-1})A^{-1} \\
+\amp= AI_n A^{-1} = AA^{-1}=I_n
+\end{align*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-4-6-2-2-4-2-5">donc l’inverse de <span class="process-math">\(ABC\)</span> est <span class="process-math">\(C^{-1}B^{-1}A^{-1}\text{.}\)</span>
+</div>
+</li>
+<li data-component="answer" id="_opt_e" data-correct=""><div class="para" id="al1-recap_chap2_matrices-4-6-2-2-5-1-1">Si <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> commutent (c’est-à-dire, si <span class="process-math">\(AB=BA\)</span>) alors l’inverse de <span class="process-math">\(ABC\)</span> est <span class="process-math">\(C^{-1}A^{-1}B^{-1}\)</span>
+</div></li>
+<li data-component="feedback" id="_opt_e">
+<div class="para" id="al1-recap_chap2_matrices-4-6-2-2-5-2-1">C’est vrai, car dans ce cas <span class="process-math">\(ABC = BAC\)</span> et on a</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-4-6-2-2-5-2-2">
+\begin{equation*}
+(ABC)(C^{-1}A^{-1}B^{-1}) = (BAC)(C^{-1}A^{-1}B^{-1}) = BA (CC^{-1})A^{-1}B^{-1} = BA I_n A^{-1}B^{-1} = BAA^{-1}B^{-1} = BB^{-1}=I_n
+\end{equation*}
+</div>
+</li>
+<li data-component="answer" id="_opt_f"><div class="para" id="al1-recap_chap2_matrices-4-6-2-2-6-1-1">Si l’inverse de <span class="process-math">\(A\)</span> est <span class="process-math">\(A\text{,}\)</span> alors <span class="process-math">\(A=I_n\text{.}\)</span>
+</div></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-4-6-2-2-6-2-1">Pas forcément ! <span class="process-math">\(I_n\)</span> est en effet égale à son inverse, mais ce n’est pas la seule.</div> <div class="para" id="al1-recap_chap2_matrices-4-6-2-2-6-2-2">Par exemple, pour <span class="process-math">\(n=2\text{,}\)</span> les matrices suivantes sont égales à leur inverse:</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-4-6-2-2-6-2-3">
+\begin{equation*}
+\begin{pmatrix}-1\amp 0\\0\amp -1\end{pmatrix},\quad \begin{pmatrix}-1\amp 0\\0\amp 1\end{pmatrix}, \quad \begin{pmatrix}1\amp 0\\0\amp -1\end{pmatrix}
+\end{equation*}
+</div>
+</li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 2.1"><a href="#al1-recap_chap2_matrices-4-6-2" title="Copy heading and permalink for Exercise 2.1" aria-label="Copy heading and permalink for Exercise 2.1">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-4-6-3"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement"><div class="para" id="al1-recap_chap2_matrices-4-6-3-1-1">On note <span class="process-math">\(A=\begin{pmatrix}1\amp1 \\2\amp 3\end{pmatrix}\text{.}\)</span> Sélectionner l’option correcte:<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<ul data-component="multiplechoice" class="exercise-interactives" data-multipleanswers="false">
+<li data-component="answer" id="_opt_a">
+<span class="process-math">\(A\)</span> n’est pas inversible.</li>
+<li data-component="feedback" id="_opt_a">
+<li data-component="answer" id="_opt_b"><span class="process-math">\(A^{-1} = \begin{pmatrix}1\amp 2 \\ 1 \amp 3\end{pmatrix}\text{.}\)</span></li>
+<li data-component="feedback" id="_opt_b">
+<li data-component="answer" id="_opt_c" data-correct=""><span class="process-math">\(A^{-1} = \begin{pmatrix}3\amp -1 \\ -2 \amp 1\end{pmatrix}\text{.}\)</span></li>
+<li data-component="feedback" id="_opt_c">
+<li data-component="answer" id="_opt_d"><span class="process-math">\(A^{-1} = \begin{pmatrix}3\amp -1 \\ -1 \amp 2\end{pmatrix}\text{.}\)</span></li>
+<li data-component="feedback" id="_opt_d">
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 2.2"><a href="#al1-recap_chap2_matrices-4-6-3" title="Copy heading and permalink for Exercise 2.2" aria-label="Copy heading and permalink for Exercise 2.2">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-4-6-4"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement">
+<div class="para" id="al1-recap_chap2_matrices-4-6-4-1-1">Soit <span class="process-math">\(\lambda\)</span> un nombre réel ou complexe. On note <span class="process-math">\(A=\begin{pmatrix}\lambda \amp 2 \\-3\amp 4\end{pmatrix}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="al1-recap_chap2_matrices-4-6-4-1-2">Sélectionner la ou les options correctes:<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-6-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<ul data-component="multiplechoice" class="exercise-interactives" data-multipleanswers="true">
+<li data-component="answer" id="_opt_a">Quel que soit <span class="process-math">\(\lambda \in \mathbb{R}\text{,}\)</span> <span class="process-math">\(A\)</span> est inversible.</li>
+<li data-component="feedback" id="_opt_a">
+<li data-component="answer" id="_opt_b">Quel que soit <span class="process-math">\(\lambda \in \mathbb{C}\text{,}\)</span> <span class="process-math">\(A\)</span> est inversible.</li>
+<li data-component="feedback" id="_opt_b">
+<li data-component="answer" id="_opt_c" data-correct="">Si <span class="process-math">\(\lambda =2\text{,}\)</span> <span class="process-math">\(A\)</span> est inversible.</li>
+<li data-component="feedback" id="_opt_c"><div class="para" id="al1-recap_chap2_matrices-4-6-4-2-3-2-1">C’est vrai : dans ce cas, <span class="process-math">\(\det(A) = 8+6 = 14\neq 0\)</span>/</div></li>
+<li data-component="answer" id="_opt_d" data-correct="">Si <span class="process-math">\(\lambda =\frac32\text{,}\)</span> <span class="process-math">\(A\)</span> est inversible.</li>
+<li data-component="feedback" id="_opt_d"><div class="para" id="al1-recap_chap2_matrices-4-6-4-2-4-2-1">C’est vrai : dans ce cas, <span class="process-math">\(\det(A) = 6+6 = 12\neq 0\)</span>/</div></li>
+<li data-component="answer" id="_opt_e">Si <span class="process-math">\(\lambda =-\frac32\text{,}\)</span> <span class="process-math">\(A\)</span> est inversible.</li>
+<li data-component="feedback" id="_opt_e"><div class="para" id="al1-recap_chap2_matrices-4-6-4-2-5-2-1">C’est faux : dans ce cas, <span class="process-math">\(\det(A) = -6+6 = 0\)</span>/</div></li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 2.3"><a href="#al1-recap_chap2_matrices-4-6-4" title="Copy heading and permalink for Exercise 2.3" aria-label="Copy heading and permalink for Exercise 2.3">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-4-6-5"><h4 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-4-6-5-1-1">Si <span class="process-math">\(A=\begin{pmatrix}1\amp3\amp5 \\0\amp2\amp 4 \\ 0 \amp 0 \amp 3\end{pmatrix}\)</span> alors  <span class="process-math">\(A^{-1}=\begin{pmatrix}1\amp -\frac32\amp \frac13 \\0\amp \frac12\amp -\frac23 \\ 0 \amp 0 \amp \frac13\end{pmatrix}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-6-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-4-6-5-2-1">C’est vrai :  si on multiplie ces deux matrices, on trouve <span class="process-math">\(I_3\text{.}\)</span>
+</div> <div class="para" id="al1-recap_chap2_matrices-4-6-5-2-2"></div>
+</li>
+<li data-component="answer" id="_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-4-6-5-2-1">C’est vrai :  si on multiplie ces deux matrices, on trouve <span class="process-math">\(I_3\text{.}\)</span>
+</div> <div class="para" id="al1-recap_chap2_matrices-4-6-5-2-2"></div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 2.4"><a href="#al1-recap_chap2_matrices-4-6-5" title="Copy heading and permalink for Exercise 2.4" aria-label="Copy heading and permalink for Exercise 2.4">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-4-6-6"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-4-6-6-1-1">Si <span class="process-math">\(A=\begin{pmatrix}1\amp3\amp5 \\0\amp2\amp 4 \\ 0 \amp 0 \amp 3\end{pmatrix}\)</span> alors  <span class="process-math">\(A^{-1}=\begin{pmatrix}1\amp \frac32\amp \frac13 \\0\amp \frac12\amp \frac23 \\ 0 \amp 0 \amp \frac13\end{pmatrix}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-6-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="_opt_t"><p>True.</p></li>
+<li data-component="feedback" id="_opt_t"><div class="para" id="al1-recap_chap2_matrices-4-6-6-2-1">C’est faux :  si on multiplie ces deux matrices, on trouve <span class="process-math">\(\begin{pmatrix}1\amp3\amp \frac{17}3 \\0\amp 1\amp \frac83 \\ 0 \amp 0 \amp 1\end{pmatrix} \neq I_3\text{.}\)</span>
+</div></li>
+<li data-component="answer" id="_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="_opt_f"><div class="para" id="al1-recap_chap2_matrices-4-6-6-2-1">C’est faux :  si on multiplie ces deux matrices, on trouve <span class="process-math">\(\begin{pmatrix}1\amp3\amp \frac{17}3 \\0\amp 1\amp \frac83 \\ 0 \amp 0 \amp 1\end{pmatrix} \neq I_3\text{.}\)</span>
+</div></li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 2.5"><a href="#al1-recap_chap2_matrices-4-6-6" title="Copy heading and permalink for Exercise 2.5" aria-label="Copy heading and permalink for Exercise 2.5">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-4-6-7"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section"><ul data-component="multiplechoice" data-multipleanswers="false">
+<div class="para" id="al1-recap_chap2_matrices-4-6-7-1-1">Si <span class="process-math">\(B=\begin{pmatrix}1\amp 0 \amp 0 \\ 3 \amp 2 \amp 0 \\ 5 \amp 4 \amp 3 \end{pmatrix}\)</span> alors  <span class="process-math">\(B^{-1}=\begin{pmatrix}1\amp 0 \amp 0 \\ -\frac32\amp \frac12 \amp 0 \\\frac13\amp -\frac23\amp \frac13\end{pmatrix}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-6-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<li data-component="answer" id="_opt_t" data-correct=""><p>True.</p></li>
+<li data-component="feedback" id="_opt_t">
+<div class="para" id="al1-recap_chap2_matrices-4-6-7-2-1">C’est vrai :  si on multiplie ces deux matrices, on trouve <span class="process-math">\(I_3\text{.}\)</span>
+</div> <div class="para" id="al1-recap_chap2_matrices-4-6-7-2-2">On peut aussi remarquer que <span class="process-math">\(B=A^\top\text{,}\)</span> donc <span class="process-math">\(B^{-1} = (A^{-1})^\top\text{.}\)</span>
+</div>
+</li>
+<li data-component="answer" id="_opt_f"><p>False.</p></li>
+<li data-component="feedback" id="_opt_f">
+<div class="para" id="al1-recap_chap2_matrices-4-6-7-2-1">C’est vrai :  si on multiplie ces deux matrices, on trouve <span class="process-math">\(I_3\text{.}\)</span>
+</div> <div class="para" id="al1-recap_chap2_matrices-4-6-7-2-2">On peut aussi remarquer que <span class="process-math">\(B=A^\top\text{,}\)</span> donc <span class="process-math">\(B^{-1} = (A^{-1})^\top\text{.}\)</span>
+</div>
+</li>
+</ul></div></div>
+<div class="autopermalink" data-description="Exercise 2.6"><a href="#al1-recap_chap2_matrices-4-6-7" title="Copy heading and permalink for Exercise 2.6" aria-label="Copy heading and permalink for Exercise 2.6">🔗</a></div></article><div class="autopermalink" data-description="Exercice 2: Inverses de matrices"><a href="#al1-recap_chap2_matrices-4-6" title="Copy heading and permalink for Exercice 2: Inverses de matrices" aria-label="Copy heading and permalink for Exercice 2: Inverses de matrices">🔗</a></div></section><section class="exercises" id="al1-recap_chap2_matrices-4-7"><h3 class="heading hide-type">
+<span class="type">Exercice</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Echelonnage de matrices</span>
+</h3>
+<article class="exercise exercise-like" id="al1-recap_chap2_matrices-4-7-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone multiplechoice_section">
+<div class="exercise-statement">
+<div class="para" id="al1-recap_chap2_matrices-4-7-2-1-1">On considère les matrices suivantes:<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-4-7-2-1-2">
+\begin{align*}
+A=\begin{pmatrix} 1 \amp 1 \amp 0 \amp 0\\0 \amp 1 \amp 0 \amp 1\\0 \amp 1 \amp 1 \amp 1\\0 \amp 0 \amp 1 \amp 0 \end{pmatrix},\quad
+B=\begin{pmatrix} 1 \amp 0 \amp 1 \amp 0\\0 \amp 1 \amp 0 \amp 1\\0 \amp 0 \amp 1 \amp 0\\0 \amp 0 \amp 0 \amp 0 \end{pmatrix},\quad\\
+C=\begin{pmatrix} 1 \amp 0 \amp 1 \amp 0\\0 \amp 1 \amp 0 \amp 0\\0 \amp 0 \amp 0 \amp 1\\0 \amp 0 \amp 0 \amp 0 \end{pmatrix},\quad
+D=\begin{pmatrix} 1 \amp 0 \amp 1 \amp 0\\0 \amp 1 \amp 0 \amp 0\\0 \amp 0 \amp 0 \amp 0\\0 \amp 0 \amp 0 \amp 1 \end{pmatrix}
+\end{align*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-4-7-2-1-3">Sélectionner toutes les affirmations correctes:<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-7-2-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<ul data-component="multiplechoice" class="exercise-interactives" data-multipleanswers="true">
+<li data-component="answer" id="_opt_a"><div class="para" id="al1-recap_chap2_matrices-4-7-2-2-1-1-1">
+<span class="process-math">\(A\)</span> est échelonnée.</div></li>
+<li data-component="feedback" id="_opt_a"><div class="para" id="al1-recap_chap2_matrices-4-7-2-2-1-2-1">C’est faux : si c’était le cas, chaque ligne de <span class="process-math">\(A\)</span> aurait son premier coefficient non nul plus à droite que la ligne du dessus. Or, les lignes <span class="process-math">\(2\)</span> et <span class="process-math">\(3\)</span> de <span class="process-math">\(A\)</span> ont leur premier coefficience non nul sur la deuxième colonne.</div></li>
+<li data-component="answer" id="_opt_b"><div class="para" id="al1-recap_chap2_matrices-4-7-2-2-2-1-1">
+<span class="process-math">\(A\)</span> est échelonnée réduite.</div></li>
+<li data-component="feedback" id="_opt_b"><div class="para" id="al1-recap_chap2_matrices-4-7-2-2-2-2-1">C’est faux, car elle n’est même pas échelonnée. Si c’était le cas, chaque ligne de <span class="process-math">\(A\)</span> aurait son premier coefficient non nul plus à droite que la ligne du dessus. Or, les lignes <span class="process-math">\(2\)</span> et <span class="process-math">\(3\)</span> de <span class="process-math">\(A\)</span> ont leur premier coefficience non nul sur la deuxième colonne.</div></li>
+<li data-component="answer" id="_opt_c" data-correct=""><div class="para" id="al1-recap_chap2_matrices-4-7-2-2-3-1-1">
+<span class="process-math">\(B\)</span> est échelonnée.</div></li>
+<li data-component="feedback" id="_opt_c">
+<div class="para" id="al1-recap_chap2_matrices-4-7-2-2-3-2-1">C’est vrai :</div> <ul class="disc" id="al1-recap_chap2_matrices-4-7-2-2-3-2-2">
+<li id="al1-recap_chap2_matrices-4-7-2-2-3-2-2-1"><div class="para" id="p-derived-al1-recap_chap2_matrices-4-7-2-2-3-2-2-1">La ligne nulle de <span class="process-math">\(B\)</span> n’est suivie d’aucune ligne non nulle:</div></li>
+<li id="al1-recap_chap2_matrices-4-7-2-2-3-2-2-2"><div class="para" id="p-derived-al1-recap_chap2_matrices-4-7-2-2-3-2-2-2">Chaque ligne non nulle de <span class="process-math">\(B\)</span> a son premier coefficient non nul plus à droite que la ligne précédente;</div></li>
+<li id="al1-recap_chap2_matrices-4-7-2-2-3-2-2-3"><div class="para" id="p-derived-al1-recap_chap2_matrices-4-7-2-2-3-2-2-3">Chaque ligne non nulle de <span class="process-math">\(B\)</span> a un <span class="process-math">\(1\)</span> comme premier coefficient non nul.</div></li>
+</ul>
+</li>
+<li data-component="answer" id="_opt_d"><div class="para" id="al1-recap_chap2_matrices-4-7-2-2-4-1-1">
+<span class="process-math">\(B\)</span> est échelonnée réduite.</div></li>
+<li data-component="feedback" id="_opt_d">
+<div class="para" id="al1-recap_chap2_matrices-4-7-2-2-4-2-1">C’est faux : si elle était échelonnée réduite, sur chaque colonne contenant un pivot, le pivot serait le seul coefficient non nul.</div> <div class="para" id="al1-recap_chap2_matrices-4-7-2-2-4-2-2">Or, sur la troisième colonne de <span class="process-math">\(B\text{,}\)</span> il y a un coefficient non nul au-dessus du pivot.</div>
+</li>
+<li data-component="answer" id="_opt_e" data-correct=""><div class="para" id="al1-recap_chap2_matrices-4-7-2-2-5-1-1">
+<span class="process-math">\(C\)</span> est échelonnée.</div></li>
+<li data-component="feedback" id="_opt_e">
+<div class="para" id="al1-recap_chap2_matrices-4-7-2-2-5-2-1">C’est vrai :</div> <ul class="disc" id="al1-recap_chap2_matrices-4-7-2-2-5-2-2">
+<li id="al1-recap_chap2_matrices-4-7-2-2-5-2-2-1"><div class="para" id="p-derived-al1-recap_chap2_matrices-4-7-2-2-5-2-2-1">La ligne nulle de <span class="process-math">\(C\)</span> n’est suivie d’aucune ligne non nulle:</div></li>
+<li id="al1-recap_chap2_matrices-4-7-2-2-5-2-2-2"><div class="para" id="p-derived-al1-recap_chap2_matrices-4-7-2-2-5-2-2-2">Chaque ligne non nulle de <span class="process-math">\(C\)</span> a son premier coefficient non nul plus à droite que la ligne précédente;</div></li>
+<li id="al1-recap_chap2_matrices-4-7-2-2-5-2-2-3"><div class="para" id="p-derived-al1-recap_chap2_matrices-4-7-2-2-5-2-2-3">Chaque ligne non nulle de <span class="process-math">\(C\)</span> a un <span class="process-math">\(1\)</span> comme premier coefficient non nul.</div></li>
+</ul>
+</li>
+<li data-component="answer" id="_opt_f" data-correct=""><div class="para" id="al1-recap_chap2_matrices-4-7-2-2-6-1-1">
+<span class="process-math">\(C\)</span> est échelonnée réduite.</div></li>
+<li data-component="feedback" id="_opt_f"><div class="para" id="al1-recap_chap2_matrices-4-7-2-2-6-2-1">C’est vrai : <span class="process-math">\(C\)</span> est échelonnée, et sur chaque colonne contenant un pivot, le pivot est le seul coefficient non nul.</div></li>
+<li data-component="answer" id="_opt_g"><div class="para" id="al1-recap_chap2_matrices-4-7-2-2-7-1-1">
+<span class="process-math">\(D\)</span> est échelonnée.</div></li>
+<li data-component="feedback" id="_opt_g">
+<div class="para" id="al1-recap_chap2_matrices-4-7-2-2-7-2-1">C’est faux : sinon, toutes les lignes suivant une ligne nulle devraient être nulles.</div> <div class="para" id="al1-recap_chap2_matrices-4-7-2-2-7-2-2">Mais ici, la troisième ligne de <span class="process-math">\(D\)</span> est nulle et pas la suivante.</div>
+</li>
+<li data-component="answer" id="_opt_h"><div class="para" id="al1-recap_chap2_matrices-4-7-2-2-8-1-1">
+<span class="process-math">\(D\)</span> est échelonnée réduite.</div></li>
+<li data-component="feedback" id="_opt_h">
+<div class="para" id="al1-recap_chap2_matrices-4-7-2-2-8-2-1">C’est faux : si elle était échelonnée réduite, elle serait échelonnée. Dans ce cas,  toutes les lignes suivant une ligne nulle devraient être nulles.</div> <div class="para" id="al1-recap_chap2_matrices-4-7-2-2-8-2-2">Mais ici, la troisième ligne de <span class="process-math">\(D\)</span> est nulle et pas la suivante.</div>
+</li>
+</ul>
+</div></div>
+<div class="autopermalink" data-description="Exercise 2.1"><a href="#al1-recap_chap2_matrices-4-7-2" title="Copy heading and permalink for Exercise 2.1" aria-label="Copy heading and permalink for Exercise 2.1">🔗</a></div></article><article class="exercise exercise-like" id="al1-recap_chap2_matrices-4-7-3"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="ptx-runestone-container"><div class="runestone fillintheblank_section"><div data-component="fillintheblank" data-question_label="">
+<div class="para" id="al1-recap_chap2_matrices-4-7-3-1-1">Considérons la matrice:<div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-7-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="al1-recap_chap2_matrices-4-7-3-1-2">
+\begin{equation*}
+A=\begin{pmatrix}1 \amp - 2 \amp 3 \amp 4 \\ 1\amp-1\amp 3 \amp 4\\ 0 \amp 2 \amp 4\amp 1 \\ 1 \amp 3 \amp 7 \amp 5\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para" id="al1-recap_chap2_matrices-4-7-3-1-3">Alors  le rang de A est <input type="text" placeholder="Text"><div class="autopermalink" data-description="Paragraph"><a href="#al1-recap_chap2_matrices-4-7-3-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<script type="application/json">[[{"regex": "^\\s*3\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-7-3-2-1-1-1-1\">C’est ça !<\/div>"}, {"regex": "^\\s*dfjgq\\s*$", "regexFlags": "", "feedback": "<div class=\"para\" id=\"al1-recap_chap2_matrices-4-7-3-2-1-2-1-1\">Une forme échelonnée de <span class=\"process-math\">\\(A\\)<\/span> est<\/div><div class=\"displaymath process-math\" id=\"al1-recap_chap2_matrices-4-7-3-2-1-2-1-2\">\n\\begin{equation*}\nA=\\begin{pmatrix}\\boxed{1} \\amp - 2 \\amp 3 \\amp 4 \\\\ 0\\amp \\boxed{1} \\amp 0 \\amp 0\\\\ 0 \\amp 0 \\amp \\boxed{1}\\amp \\frac14 \\\\ 0 \\amp 0 \\amp 0 \\amp 50\\end{pmatrix}\n\\end{equation*}\n<\/div><div class=\"para\" id=\"al1-recap_chap2_matrices-4-7-3-2-1-2-1-3\">Il y a trois pivots (encadrés ci-dessus) donc <span class=\"process-math\">\\(\\rg(A)=3\\text{.}\\)<\/span><\/div>"}]]</script>
+</div></div></div>
+<div class="autopermalink" data-description="Exercise 2.2"><a href="#al1-recap_chap2_matrices-4-7-3" title="Copy heading and permalink for Exercise 2.2" aria-label="Copy heading and permalink for Exercise 2.2">🔗</a></div></article><div class="autopermalink" data-description="Exercice 2: Echelonnage de matrices"><a href="#al1-recap_chap2_matrices-4-7" title="Copy heading and permalink for Exercice 2: Echelonnage de matrices" aria-label="Copy heading and permalink for Exercice 2: Echelonnage de matrices">🔗</a></div></section><div class="autopermalink" data-description="Section 2: — Entraînez-vous !"><a href="#al1-recap_chap2_matrices-4" title="Copy heading and permalink for Section 2: — Entraînez-vous !" aria-label="Copy heading and permalink for Section 2: — Entraînez-vous !">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="al1-recap_chap2_matrices-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="al1-recap_chap2_matrices-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

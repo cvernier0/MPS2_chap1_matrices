@@ -315,7 +315,7 @@
 
   <exercise exercise-interactive="truefalse">
     <statement correct="yes">
-      <p>Pour toutes matrices <m>A,B\in\mathcal{M}_n(\mathbb{R})</m>, si <m>A\neq B</m>m> alors, pour toute matrice inversible <m>C\in\mathcal{M}_n(\mathbb{R})</m>, on a  <m>AC \neq BC</m>.</p>
+      <p>Pour toutes matrices <m>A,B\in\mathcal{M}_n(\mathbb{R})</m>, si <m>A\neq B</m> alors, pour toute matrice inversible <m>C\in\mathcal{M}_n(\mathbb{R})</m>, on a  <m>AC \neq BC</m>.</p>
           </statement>
     <feedback>
       <p>Cette fois c'est vrai: on peut le montrer par contraposée. </p>
@@ -422,7 +422,7 @@
               <row><cell><m>B^\top(A+E^\top)</m></cell><cell> <var /></cell></row>
               <row><cell><m>2A+C</m></cell><cell> <var /></cell></row>
               <row><cell><m>(C^\top+D)B^\top</m></cell><cell> <var /></cell></row>
-              <row><cell><m>CD+B^\topE^\top</m></cell><cell> <var /></cell></row>
+              <row><cell><m>CD+B^\top E^\top</m></cell><cell> <var /></cell></row>
               <row><cell><m>(BD^\top)C^\top + B</m></cell><cell> <var /></cell></row>
             </tabular>
       </statement><setup>
@@ -1027,7 +1027,7 @@
 
     <li><p>Si <m>A,B\in\mathcal M_n(\R)</m> sont inversibles, alors <m>AB</m> aussi, <alert>mais <m>(AB)^{-1}=B^{-1}A^{-1}</m></alert>, et non <m>A^{-1}B^{-1}</m>.</p></li>
 
-    <li><p>Pour deux matrices inversibles <m>A, B \in _mathcal M_n(\R)</m>, en général on n'a <alert>pas</alert> <m>(A+B)^{-1}=A^{-1}+B^{-1}</m>.</p>
+    <li><p>Pour deux matrices inversibles <m>A, B \in \mathcal M_n(\R)</m>, en général on n'a <alert>pas</alert> <m>(A+B)^{-1}=A^{-1}+B^{-1}</m>.</p>
     <p><ul>
           <li><p>Il se peut que <m>A</m> et <m>B</m> soient inversibles, mais que <m>A+B</m> ne le soit pas.</p>
           <p>Par exemple, <m>I_n</m> et <m>-I_n</m> sont inversibles<fn>✑ Quel est l'inverse de <m>-I_n</m> ?</fn> mais <m>I_n+(-I_n)=0_{n}</m> ne l'est pas.</p></li>

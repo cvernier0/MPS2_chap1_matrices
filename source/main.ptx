@@ -76,7 +76,7 @@
               <li><p>Mettre uen matrice sous forme échelonnée, puis sous forme échelonnée réduite</p></li>
               <li><p>Déterminer si une matrice <m>2\times 2</m> est inversible, et appliquer la formule pour l'inverser</p></li>
               <li><p>Inverser une matrice carrée de taille <m>n\times n</m>, avec <m>n\geq 3</m>:</p>
-                <ul>
+              <ul>
                 <li>avec le pivot de Gauss</li>
                 <li>ou en utilisant des informations spécifiques à la matrice (comme une équation du type <m>A^2-3A+I_n = 0_{n,n}</m>).</li></ul>
             </li>
@@ -212,17 +212,17 @@
 
    <exercise exercise-interactive="truefalse">
     <statement correct="yes">
-      <p>Pour toutes matrices <m>A,B\in\mathcal{M}_n(\mathbb{R})</m>, si <m>A\neq B</m> alors <m>{}^tA \neq {}^tB</m>.</p>
+      <p>Pour toutes matrices <m>A,B\in\mathcal{M}_n(\mathbb{R})</m>, si <m>A\neq B</m> alors <m>A^\top \neq B^\top</m>.</p>
           </statement>
     <feedback>
       <p>C'est vrai! </p>
 
       <p><term>Preuve 1: par contraposée</term></p>
-      <p>Supposons que <m>{}^tA = {}^tB</m>, alors <m>{}^t({}^tA) \neq {}^t({}^tB)</m>, donc  <m>A=B</m>.</p>
+      <p>Supposons que <m>A^\top = B^\top</m>, alors <m>(A^\top)^\top = (B^\top)^\top</m>, donc  <m>A=B</m>.</p>
       <p><term>Preuve 2: directement</term></p>
       <p>Supposons que <m>A\neq B</m>, alors <m>A</m> et <m>B</m> doivent avoir (au moins) un coefficient différent: autrement dit, il existe <m>(i,j)</m> tels que</p>
       <me>a_{ij}\neq b_{ij}</me>
-      <p>or le <m>(j,i)</m>-ième coefficient de <m>{}^tA</m> est <m>a_{ij}</m>,  le <m>(j,i)</m>-ième coefficient de <m>{}^tB</m> est <m>b_{ij}</m>, donc les  <m>(j,i)</m>-ièmes coefficients de  <m>{}^tA</m> et <m>{}^tB</m> sont différents, donc ces deux matrices sont différentes.</p>
+      <p>or le <m>(j,i)</m>-ième coefficient de <m>A^\top</m> est <m>a_{ij}</m>,  le <m>(j,i)</m>-ième coefficient de <m>B^\top</m> est <m>b_{ij}</m>, donc les  <m>(j,i)</m>-ièmes coefficients de  <m>A^\top</m> et <m>B^\top</m> sont différents, donc ces deux matrices sont différentes.</p>
     </feedback>
   </exercise>
 
@@ -418,12 +418,12 @@
             <tabular>
               <row><cell><m>EA</m></cell><cell> <var /></cell></row>
               <row><cell><m>AE</m></cell><cell> <var /></cell></row>
-              <row><cell><m>A{}^tB</m></cell><cell> <var /></cell></row>
-              <row><cell><m>{}^tB(A+{}^tE)</m></cell><cell> <var /></cell></row>
+              <row><cell><m>AB^\top</m></cell><cell> <var /></cell></row>
+              <row><cell><m>B^\top(A+E^\top)</m></cell><cell> <var /></cell></row>
               <row><cell><m>2A+C</m></cell><cell> <var /></cell></row>
-              <row><cell><m>({}^tC+D){}^tB</m></cell><cell> <var /></cell></row>
-              <row><cell><m>CD+{}^tB{}^tE</m></cell><cell> <var /></cell></row>
-              <row><cell><m>(B{}^tD){}^tC + B</m></cell><cell> <var /></cell></row>
+              <row><cell><m>(C^\top+D)B^\top</m></cell><cell> <var /></cell></row>
+              <row><cell><m>CD+B^\topE^\top</m></cell><cell> <var /></cell></row>
+              <row><cell><m>(BD^\top)C^\top + B</m></cell><cell> <var /></cell></row>
             </tabular>
       </statement><setup>
         <var>
@@ -449,10 +449,10 @@
         <var>
         <condition string="6x1"><feedback><p>C'est ça !</p></feedback></condition>
         <condition string="dfjgq"><feedback>
-          <p><m>E</m> est de taille <m>{\color{orange}{1}}\times {\color{blue}{3}}</m> donc <m>{}^tE</m> est de taille <m>{\color{blue}{3}}\times {\color{orange}{1}}</m>.</p>
-        <p><m>A</m> aussi, donc <m>A+{}^tE</m> est définie, et <m>A+{}^tE</m> est de taille <m>{\color{blue}{3}}\times {\color{orange}{1}}</m>.</p>
-        <p>Enfin, <m>B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m> donc <m>{}^tB</m>  est de taille <m>{\color{purple}{6}}\times {\color{blue}{3}}</m>.</p>
-        <p>Enfin, pour le produit de <m>{}^tB</m> par <m>A+{}^tE</m>,</p>
+          <p><m>E</m> est de taille <m>{\color{orange}{1}}\times {\color{blue}{3}}</m> donc <m>E^\top</m> est de taille <m>{\color{blue}{3}}\times {\color{orange}{1}}</m>.</p>
+        <p><m>A</m> aussi, donc <m>A+E^\top</m> est définie, et <m>A+E^\top</m> est de taille <m>{\color{blue}{3}}\times {\color{orange}{1}}</m>.</p>
+        <p>Enfin, <m>B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m> donc <m>B^\top</m>  est de taille <m>{\color{purple}{6}}\times {\color{blue}{3}}</m>.</p>
+        <p>Enfin, pour le produit de <m>B^\top</m> par <m>A+E^\top</m>,</p>
         <me>({\color{purple}{6}}\times {\color{blue}{3}})\cdot ({\color{blue}{3}}\times {\color{orange}{1}}) \leadsto {\color{purple}{6}}\times {\color{orange}{1}} </me></feedback>
         </condition>
         </var>
@@ -469,10 +469,10 @@
         <var>
         <condition string="2x3"><feedback><p>C'est ça !</p></feedback></condition>
         <condition string="dfjgq"><feedback>
-         <p><m>C</m> est de taille <m>{\color{purple}{6}} \times {\color{teal}{2}}</m>, donc <m>{}^tC</m> est de taille <m>{\color{teal}{2}} \times {\color{purple}{6}}</m>, tout comme <m>D</m>.</p>
-         <p>Donc la somme <m>{}^tC + D</m> est définie, et <m>{}^tC+D</m> est de taille  <m>{\color{teal}{2}} \times {\color{purple}{6}}</m>.</p>
-         <p><m>B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m> donc <m>{}^tB</m>  est de taille <m>{\color{purple}{6}}\times {\color{blue}{3}}</m>.</p>
-         <p>Et pour le produit de <m>{}^tC + D</m> par <m>{}^tB</m>,</p>
+         <p><m>C</m> est de taille <m>{\color{purple}{6}} \times {\color{teal}{2}}</m>, donc <m>C^\top</m> est de taille <m>{\color{teal}{2}} \times {\color{purple}{6}}</m>, tout comme <m>D</m>.</p>
+         <p>Donc la somme <m>C^\top + D</m> est définie, et <m>C^\top+D</m> est de taille  <m>{\color{teal}{2}} \times {\color{purple}{6}}</m>.</p>
+         <p><m>B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m> donc <m>B^\top</m>  est de taille <m>{\color{purple}{6}}\times {\color{blue}{3}}</m>.</p>
+         <p>Et pour le produit de <m>C^\top + D</m> par <m>B^\top</m>,</p>
          <me>({\color{teal}{2}} \times {\color{purple}{6}})\cdot ({\color{purple}{6}}\times {\color{blue}{3}}) \leadsto {\color{teal}{2}} \times {\color{blue}{3}}</me>
        </feedback>
         </condition>
@@ -482,23 +482,23 @@
         <condition string="dfjgq"><feedback>
           <p>Pour le produit <m>CD</m>, on a</p>
           <me>({\color{purple}{6}} \times {\color{teal}{2}})\cdot({\color{teal}{2}} \times {\color{purple}{6}}) \leadsto  {\color{purple}{6}} \times {\color{purple}{6}}</me>
-          <p><m>B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m> donc <m>{}^tB</m>  est de taille <m>{\color{purple}{6}}\times {\color{blue}{3}}</m>.</p>
-           <p><m>E</m> est de taille <m>{\color{orange}{1}}\times {\color{blue}{3}}</m> donc <m>{}^tE</m> est de taille <m>{\color{blue}{3}}\times {\color{orange}{1}}</m>.</p>
-           <p>Donc le produit <m>{}^tB{}^tE</m> donne</p>
+          <p><m>B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m> donc <m>B^\top </m>  est de taille <m>{\color{purple}{6}}\times {\color{blue}{3}}</m>.</p>
+           <p><m>E</m> est de taille <m>{\color{orange}{1}}\times {\color{blue}{3}}</m> donc <m>E^\top </m> est de taille <m>{\color{blue}{3}}\times {\color{orange}{1}}</m>.</p>
+           <p>Donc le produit <m>B^\top E^\top </m> donne</p>
            <me>({\color{purple}{6}}\times {\color{blue}{3}})\cdot ({\color{blue}{3}}\times {\color{orange}{1}}) \leadsto {\color{purple}{6}}\times {\color{orange}{1}}</me>
-           <p>Donc <m>CD</m> et <m>{}^tB{}^tE</m> sont définis, mais pas de même taille, et donc leur somme n'est pas définie.</p></feedback>
+           <p>Donc <m>CD</m> et <m>B^\top E^\top </m> sont définis, mais pas de même taille, et donc leur somme n'est pas définie.</p></feedback>
         </condition>
         </var>
 
          <var><condition string="3x6"><feedback><p>C'est ça !</p></feedback></condition>
         <condition string="dfjgq"><feedback>
-          <p><m>D</m> est de taille <m>{\color{teal}{2}} \times {\color{purple}{6}}</m> donc <m>{}^tD</m> est de taille <m>{\color{purple}{6}} \times {\color{teal}{2}}</m>.</p>
-          <p>Donc le produit <m>B{}^tD</m> donne</p>
+          <p><m>D</m> est de taille <m>{\color{teal}{2}} \times {\color{purple}{6}}</m> donc <m>D^\top </m> est de taille <m>{\color{purple}{6}} \times {\color{teal}{2}}</m>.</p>
+          <p>Donc le produit <m>BD^\top </m> donne</p>
           <me>({\color{blue}{3}}\times {\color{purple}{6}})\cdot ({\color{purple}{6}} \times {\color{teal}{2}}) \leadsto {\color{blue}{3}} \times {\color{teal}{2}}</me>
-          <p><m>C</m> est de taille <m>{\color{purple}{6}} \times {\color{teal}{2}}</m>, donc <m>{}^tC</m> est de taille <m>{\color{teal}{2}} \times {\color{purple}{6}}</m>.</p>
-          <p>Donc le produit <m>(B{}^tD){}^tC</m> donne</p>
+          <p><m>C</m> est de taille <m>{\color{purple}{6}} \times {\color{teal}{2}}</m>, donc <m>C^\top </m> est de taille <m>{\color{teal}{2}} \times {\color{purple}{6}}</m>.</p>
+          <p>Donc le produit <m>(BD^\top )C^\top </m> donne</p>
           <me>({\color{blue}{3}} \times {\color{teal}{2}}) \times ({\color{teal}{2}} \times {\color{purple}{6}}) \leadsto {\color{blue}{3}}\times {\color{purple}{6}}</me>
-          <p><m>(B{}^tD){}^tC</m> est de même taille que <m>B</m>, donc on peut les sommer, et <m>(B{}^tD){}^tC+B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m>.</p>
+          <p><m>(BD^\top )C^\top </m> est de même taille que <m>B</m>, donc on peut les sommer, et <m>(BD^\top )C^\top +B</m> est de taille <m>{\color{blue}{3}}\times {\color{purple}{6}}</m>.</p>
         </feedback>
         </condition>
         </var>
@@ -520,9 +520,9 @@
 
           <p><tabular>
             <row><cell><m>-3(D+2E)</m></cell><cell><var /></cell></row>
-            <row><cell><m>2{}^tA+C</m></cell><cell><var /></cell></row>
-            <row><cell><m>(B-{}^tB)^2</m></cell><cell><var /></cell></row>
-            <row><cell><m>{}^t(2{}^tE-3{}^tD)</m></cell><cell><var /></cell></row>
+            <row><cell><m>2A^\top +C</m></cell><cell><var /></cell></row>
+            <row><cell><m>(B-B^\top)^2</m></cell><cell><var /></cell></row>
+            <row><cell><m>(2E^\top -3D^\top )^\top</m></cell><cell><var /></cell></row>
             <row><cell><m>CBA</m></cell><cell><var /></cell></row>
             <row><cell><m>ABC-AC</m></cell><cell><var /></cell></row>
             <row><cell><m>B^2+CA</m></cell><cell><var /></cell></row>
@@ -547,7 +547,7 @@
 
         <var> <condition string="7 1"><feedback><p>C'est ça !</p></feedback> </condition>
         <condition string="dfjgq"><feedback><p>Le calcul donne</p><md>
-          <mrow>2{}^tA+C\amp = 2{}^t\begin{pmatrix}  3 \amp 0\\-1 \amp 2\\1 \amp 1\end{pmatrix} +\begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix} </mrow>
+          <mrow>2A^\top +C\amp = 2\begin{pmatrix}  3 \amp 0\\-1 \amp 2\\1 \amp 1\end{pmatrix}^\top +\begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix} </mrow>
           <mrow>\amp = 2\begin{pmatrix}  3 \amp -1 \amp 1\\0 \amp 2\amp 1 \end{pmatrix} +\begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix} </mrow>
           <mrow>\amp = \begin{pmatrix}  6 \amp -2 \amp 2\\0 \amp 4\amp 2 \end{pmatrix} +\begin{pmatrix}  1 \amp 4 \amp 2\\1 \amp 1 \amp 5\end{pmatrix} </mrow>
           <mrow>\amp = \begin{pmatrix}  7 \amp 2 \amp 4\\1 \amp 5\amp 7 \end{pmatrix} </mrow>
@@ -556,23 +556,23 @@
 
         <var> <condition string="-1 0"><feedback><p>C'est ça !</p></feedback> </condition>
         <condition string="dfjgq"><feedback><p>Le calcul donne</p><md>
-        <mrow>B-{}^tB \amp= \begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix} - {}^t\begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix}</mrow>
+        <mrow>B-B^\top \amp= \begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix} - \begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix}^\top</mrow>
         <mrow>\amp = \begin{pmatrix}  4 \amp -1\\0 \amp 2\end{pmatrix} - \begin{pmatrix}  4 \amp 0\\1 \amp 2\end{pmatrix}</mrow>
         <mrow>\amp = \begin{pmatrix}  0 \amp -1\\1 \amp 0\end{pmatrix} </mrow></md>
         <p>donc</p>
-        <me>(B-{}^tB)^2 = \begin{pmatrix}  0 \amp -1\\1 \amp 0\end{pmatrix}\begin{pmatrix} 0 \amp -1\\1 \amp 0\end{pmatrix}=\begin{pmatrix}  -1 \amp 0\\0 \amp -1\end{pmatrix}</me></feedback>
+        <me>(B-B^\top)^2 = \begin{pmatrix}  0 \amp -1\\1 \amp 0\end{pmatrix}\begin{pmatrix} 0 \amp -1\\1 \amp 0\end{pmatrix}=\begin{pmatrix}  -1 \amp 0\\0 \amp -1\end{pmatrix}</me></feedback>
         </condition>
         </var>
 
         <var> <condition string="9 1 -1"><feedback><p>C'est ça !</p></feedback> </condition>
         <condition string="dfjgq"><feedback><p>Le calcul donne</p><md>
-        <mrow>2{}^tE-3{}^tD \amp = 2{}^t\begin{pmatrix}  6 \amp 1 \amp 3\\-1 \amp 1 \amp 2\\4 \amp 1 \amp 3\end{pmatrix} - 3 {}^t\begin{pmatrix}  1 \amp 0 \amp 1\\-1 \amp 0 \amp 1\\3 \amp 2 \amp 1\end{pmatrix}</mrow>
+        <mrow>2E^\top -3D^\top \amp = 2\begin{pmatrix}  6 \amp 1 \amp 3\\-1 \amp 1 \amp 2\\4 \amp 1 \amp 3\end{pmatrix}^\top - 3 \begin{pmatrix}  1 \amp 0 \amp 1\\-1 \amp 0 \amp 1\\3 \amp 2 \amp 1\end{pmatrix}^\top</mrow>
         <mrow> \amp = 2\begin{pmatrix}  6 \amp -1 \amp 4\\1 \amp 1 \amp 1\\3 \amp 2 \amp 3\end{pmatrix} - 3 \begin{pmatrix}  1 \amp -1 \amp 3\\0 \amp 0 \amp 2\\1 \amp 1 \amp 1\end{pmatrix}</mrow>
         <mrow> \amp = \begin{pmatrix}  12 \amp -2 \amp 8\\2 \amp 2 \amp 2\\6 \amp 4 \amp 6\end{pmatrix} -  \begin{pmatrix} 3  \amp -3 \amp 9\\0 \amp 0 \amp 6\\3 \amp 3 \amp 3\end{pmatrix}</mrow>
         <mrow> \amp = \begin{pmatrix}  9 \amp 1 \amp -1\\2 \amp 2 \amp -4\\3 \amp 1 \amp 3\end{pmatrix} </mrow></md>
-        <p>donc <m>{}^t(2{}^tE-3{}^tD)=\begin{pmatrix}  9 \amp 2 \amp 3\\1 \amp 2 \amp 1\\-1 \amp -4 \amp 3\end{pmatrix}</m>.</p>
+        <p>donc <m>(2E^\top -3D^\top )^\top =\begin{pmatrix}  9 \amp 2 \amp 3\\1 \amp 2 \amp 1\\-1 \amp -4 \amp 3\end{pmatrix}</m>.</p>
         <p><em>Remarque: </em> On peut utiliser les propriétés de la transposée pour simplifier le calcul:</p>
-        <me>{}^t(2{}^tE-3{}^tD)= 2{}^t({}^tE) - 3 {}^t({}^t D) = 2E-3D</me></feedback>
+        <me>(2E^\top-3D^\top)= 2(E^\top)^\top - 3 ( D^\top)^\top = 2E-3D</me></feedback>
         </condition>
         </var>
 
@@ -1037,10 +1037,10 @@
           <solution><me>A+B=5I_n, (A+B)^{-1}=\frac15 I_n, A^{-1}+B^{-1}=\frac 12 I_n + \frac 13 I_n = \frac56 I_n</me></solution></example></li>
         </ul></p></li>
 
-      <li> <p> Soient <m>A \in \mathcal M_{n,p}(\K)</m>, <m>B \in \mathcal M_{p,q}(\K)</m>,alors <m>{}^t(AB)={}^tB{}^tA</m>, et non <m>{}^tA{}^tB</m>.</p>
-      <example><p>Supposons que <m>A</m> soit de taille <m>6\times 17</m> et <m>B</m> de taille <m>17\times 4</m>. Quelle sont les tailles de <m>{}^tA</m>, <m>{}^tB</m>, <m>AB</m>, <m>{}^t(AB)</m>? Est-ce que <m>{}^tA{}^tB</m> existe  ? Et <m>{}^tB{}^tA</m> ? </p>
+      <li> <p> Soient <m>A \in \mathcal M_{n,p}(\K)</m>, <m>B \in \mathcal M_{p,q}(\K)</m>,alors <m>(AB)^\top=B^\top A^\top</m>, et non <m>A^\top B^\top </m>.</p>
+      <example><p>Supposons que <m>A</m> soit de taille <m>6\times 17</m> et <m>B</m> de taille <m>17\times 4</m>. Quelle sont les tailles de <m>A^\top </m>, <m>B^\top </m>, <m>AB</m>, <m>(AB)^\top</m>? Est-ce que <m>{}^tA{}^tB</m> existe  ? Et <m>{}^tB{}^tA</m> ? </p>
       <solution><p><tabular halign="center" top="minor" left="minor" bottom="minor" right="minor">
-      <row><cell><m>{}^tA</m></cell><cell><m>{}^t B</m></cell><cell><m>AB</m></cell><cell><m>{}^t(AB)</m></cell><cell><m>{}^tA{}^tB</m></cell><cell><m>{}^tB{}^tA</m></cell> </row>
+      <row><cell><m>A^\top</m></cell><cell><m>B^\top</m></cell><cell><m>AB</m></cell><cell><m>(AB)^\top</m></cell><cell><m>A^\top B^\top</m></cell><cell><m>B^\top A^\top</m></cell> </row>
       <row><cell><m>17\times 6</m></cell><cell><m>4\times 17</m></cell><cell><m>6\times 4</m></cell><cell><m>4\times 6</m></cell><cell>n'existe pas</cell><cell><m>4\times 6</m></cell></row></tabular></p></solution></example></li>
     </ul></p>
  </assemblage>
